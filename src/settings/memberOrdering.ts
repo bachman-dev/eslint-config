@@ -1,11 +1,11 @@
 const classMemberOrdering = {
   memberTypes: [
     /*
-     *Group by Fields - Static Initialization - Constructors - Methods
-     *Group Fields and Methods by Static and Instance
-     *Group Static and Instance by Visibility (public - protected - private - #private)
-     *For Fields, Group Visibilities by presence/absence of readonly modifier
-     */
+       Group by Fields - Static Initialization - Constructors - Methods
+       Group Fields and Methods by Static and Instance
+       Group Static and Instance by Visibility (public - protected - private - #private)
+       For Fields, Group Visibilities by presence/absence of readonly modifier
+    */
 
     // Fields
     "public-static-readonly-field",

@@ -68,10 +68,8 @@ const namingConvention = [
     format: ["camelCase", "snake_case", "PascalCase", "UPPER_CASE"],
   },
   {
-    /*
-     * And if their property names need quotes, only forbid starting/ending underscores, cause we likely can't stick
-     *  to a format if we need quotes.
-     */
+    /* And if their property names need quotes, only forbid starting/ending underscores, cause we likely can't stick
+        to a format if we need quotes. */
     selector: ["objectLiteralProperty", "typeProperty"],
     modifiers: ["requiresQuotes"],
     leadingUnderscore: "forbid",
