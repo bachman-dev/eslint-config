@@ -2,18 +2,34 @@ import memberOrdering from "./memberOrdering.js";
 import namingConvention from "./namingConvention.js";
 import noRestrictedSyntax from "./noRestrictedSyntax.js";
 
-const noMagicNumbers = {
+export const jsMaxParams = { max: 4 };
+
+export const tsMaxParams = { ...jsMaxParams };
+
+export const jsNoMagicNumbers = {
   ignoreArrayIndexes: true,
   ignoreDefaultValues: true,
   ignore: [-1, 0, 1, "-1n", "0n", "1n"],
 };
 
-const noShadow = {
+export const tsNoMagicNumbers = {
+  ...jsNoMagicNumbers,
+  ignoreEnums: true,
+  ignoreNumericLiteralTypes: true,
+  ignoreReadonlyClassProperties: true,
+  ignoreTypeIndexes: true,
+};
+
+export const jsNoShadow = {
   builtinGlobals: true,
   ignoreOnInitialization: true,
 };
 
-const noUnusedVars = {
+export const tsNoShadow = {
+  ...jsNoShadow,
+};
+
+export const jsNoUnusedVars = {
   vars: "all",
   args: "after-used",
   caughtErrors: "all",
@@ -25,19 +41,34 @@ const noUnusedVars = {
   varsIgnorePattern: "^_",
 };
 
-const noUseBeforeDefine = {
+export const tsNoUnusedVars = {
+  ...jsNoUnusedVars,
+};
+
+export const jsNoUseBeforeDefine = {
   functions: false,
   classes: true,
   variables: true,
   allowNamedExports: true,
 };
 
-const preferDestructuring = { object: true, array: false };
+export const tsNoUseBeforeDefine = {
+  ...jsNoUseBeforeDefine,
+  enums: true,
+  typedefs: true,
+  ignoreTypeReferences: true,
+};
+
+export const jsPreferDestructuring = { object: true, array: false };
+
+export const tsPreferDestructuring = {
+  ...jsPreferDestructuring,
+};
 
 const settings = {
   possibleProblems: {
-    noUnusedVars,
-    noUseBeforeDefine,
+    noUnusedVars: jsNoUnusedVars,
+    noUseBeforeDefine: jsNoUseBeforeDefine,
   },
   suggestions: {
     arrowBodyStyle: ["as-needed", { requireReturnForObjectLiteral: true }],
@@ -52,15 +83,15 @@ const settings = {
     noConsole: { allow: ["info", "warn", "error"] },
     noImplicitGlobals: { lexicalBindings: true },
     noLabels: { allowLoop: true },
-    noMagicNumbers,
+    noMagicNumbers: jsNoMagicNumbers,
     noPlusPlus: { allowForLoopAfterthoughts: true },
     noRestrictedSyntax,
     noReturnAssign: "always",
-    noShadow,
+    noShadow: jsNoShadow,
     noWarningComments: { terms: ["fixme"] },
     oneVar: "never",
     operatorAssignment: "always",
-    preferDestructuring,
+    preferDestructuring: jsPreferDestructuring,
   },
   formatting: {
     lineCommentPosition: {
@@ -79,24 +110,24 @@ const settings = {
     memberOrdering,
     namingConvention,
     noMagicNumbers: {
-      ...noMagicNumbers,
+      ...jsNoMagicNumbers,
       ignoreEnums: true,
       ignoreNumericLiteralTypes: true,
       ignoreReadonlyClassProperties: true,
       ignoreTypeIndexes: true,
     },
     noShadow: {
-      ...noShadow,
+      ...jsNoShadow,
     },
-    noUnusedVars,
+    noUnusedVars: jsNoUnusedVars,
     noUseBeforeDefine: {
-      ...noUseBeforeDefine,
+      ...jsNoUseBeforeDefine,
       enums: true,
       typedefs: true,
       ignoreTypeReferences: true,
     },
     preferDestructuring: {
-      ...preferDestructuring,
+      ...jsPreferDestructuring,
     },
     returnAwait: "always",
     switchExhaustivenessCheck: {
