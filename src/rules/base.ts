@@ -108,9 +108,8 @@ const baseRules: RuleMetadata = {
     {
       name: "no-useless-assignment",
       url: "https://eslint.org/docs/latest/rules/no-useless-assignment",
-      severity: "error",
       //TODO: ESLint 9.0 Support
-      filteredWhen: () => true,
+      severity: "off",
       admonishments: [
         {
           type: "note",
@@ -368,8 +367,7 @@ const baseRules: RuleMetadata = {
       admonishments: [
         {
           type: "warning",
-          text: `Logging via the built-in "console" object can be convenient, but usually leads to excess outputs hanging around; it's best to use a logging framework (or make your own service, disabling this rule in your own methods) so that logging is centralized, configurable, and not (as often) subject to misplaced log-prints that make it into production.\n
-          All that in mind, if you really want to bypass this rule and go without an abstracted logging framework/service, you may set "allowConsole" to "true" when extending this configuration.`,
+          text: `Logging via the built-in "console" object can be convenient, but usually leads to excess outputs hanging around; it's best to use a logging framework (or make your own service, disabling this rule in your own methods) so that logging is centralized, configurable, and not (as often) subject to misplaced log-prints that make it into production. All that in mind, if you really want to bypass this rule and go without an abstracted logging framework/service, you may set "allowConsole" to "true" when extending this configuration.`,
         },
       ],
     },
