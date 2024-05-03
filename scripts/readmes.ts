@@ -30,13 +30,18 @@ function admonish(admonishments: Admonishment[] | undefined): string {
   return admonishmentString;
 }
 
-function header(level: number, text: string): string {
-  const MAX_DEPTH = 6;
-  if (level < 1 || level > MAX_DEPTH) {
-    throw new RangeError(`Expected header level between 1 and 6, got ${level}`);
-  }
+enum Heading {
+  One = 1,
+  Two = 2,
+  Three = 3,
+  Four = 4,
+  Five = 5,
+  Six = 6,
+}
+
+function header(level: Heading, text: string): string {
   let headerString = "";
-  for (let idx = 1; idx <= level; idx++) {
+  for (let idx = Heading.One; idx <= level; idx++) {
     headerString += "#";
   }
   headerString += ` ${text}\n\n`;
@@ -61,15 +66,6 @@ function list(items: string[]): string {
 
 function paragraph(text: string): string {
   return `${text}\n\n`;
-}
-
-enum Heading {
-  One = 1,
-  Two = 2,
-  Three = 3,
-  Four = 4,
-  Five = 5,
-  Six = 6,
 }
 
 const rulesPath = join(process.cwd(), "src", "rules", "README.md");
