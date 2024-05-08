@@ -108,6 +108,13 @@ const typescript: RuleMetadata = {
       settings: {
         prefer: "parameter-property",
       },
+      filteredWhen: (options) => options.requireParameterProperties === false,
+      admonishments: [
+        {
+          type: "tip",
+          text: `Older projects may need some work to adhere to this rule; you can set "requireParameterProperties" to "false," but updating the code to adhere to this rule should be done sooner than later.`,
+        },
+      ],
     },
     {
       name: "@typescript-eslint/prefer-enum-initializers",
