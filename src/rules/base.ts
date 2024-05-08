@@ -2,6 +2,7 @@ import {
   jsMaxParams,
   jsNoMagicNumbers,
   jsNoShadow,
+  jsNoUnusedExpressions,
   jsNoUnusedVars,
   jsNoUseBeforeDefine,
   jsPreferDestructuring,
@@ -636,7 +637,19 @@ const baseRules: RuleMetadata = {
       url: "https://eslint.org/docs/latest/rules/no-unneeded-ternary",
       severity: "error",
     },
-    // TODO: no-unused-expressions
+    {
+      name: "no-unused-expressions",
+      url: "https://eslint.org/docs/latest/rules/no-unused-expressions#options",
+      severity: "error",
+      settings: jsNoUnusedExpressions,
+      filteredWhen: (options) => options.language === "typescript",
+      admonishments: [
+        {
+          type: "note",
+          text: `See the entry for "@typescript-eslint/no-unused-expressions" for TypeScript files.`,
+        },
+      ],
+    },
     {
       name: "no-useless-call",
       url: "https://eslint.org/docs/latest/rules/no-useless-call",

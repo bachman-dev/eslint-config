@@ -1,6 +1,7 @@
 import type { RuleMetadata } from "../types.js";
 import memberOrdering from "../settings/memberOrdering.js";
 import namingConvention from "../settings/namingConvention.js";
+import { tsNoUnusedExpressions } from "../settings/shared.js";
 
 const typescript: RuleMetadata = {
   name: "TypeScript Rules",
@@ -94,13 +95,17 @@ const typescript: RuleMetadata = {
       url: "https://typescript-eslint.io/rules/no-unsafe-unary-minus",
       severity: "error",
     },
-    // TODO: no-unused-expressions
+    {
+      name: "@typescript-eslint/no-unused-expressions",
+      url: "https://typescript-eslint.io/rules/no-unused-expressions",
+      severity: "error",
+      settings: tsNoUnusedExpressions,
+    },
     {
       name: "@typescript-eslint/no-useless-empty-export",
       url: "https://typescript-eslint.io/rules/no-useless-empty-export",
       severity: "error",
     },
-    // TODO: Make a final decision on parameter-properties
     {
       name: "@typescript-eslint/parameter-properties",
       url: "https://typescript-eslint.io/rules/parameter-properties",

@@ -386,6 +386,17 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 ### [🛑 no-unneeded-ternary](https://eslint.org/docs/latest/rules/no-unneeded-ternary)
 
+### [🛑 no-unused-expressions](https://eslint.org/docs/latest/rules/no-unused-expressions#options)
+
+#### Settings
+
+```json
+{ "enforceForJSX": true }
+```
+
+> [!NOTE]
+> See the entry for "@typescript-eslint/no-unused-expressions" for TypeScript files.
+
 ### [🛑 no-useless-call](https://eslint.org/docs/latest/rules/no-useless-call)
 
 ### [🛑 no-useless-computed-key](https://eslint.org/docs/latest/rules/no-useless-computed-key)
@@ -651,6 +662,14 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 ### [🛑 @typescript-eslint/no-unnecessary-qualifier](https://typescript-eslint.io/rules/no-unnecessary-qualifier)
 
 ### [🛑 @typescript-eslint/no-unsafe-unary-minus](https://typescript-eslint.io/rules/no-unsafe-unary-minus)
+
+### [🛑 @typescript-eslint/no-unused-expressions](https://typescript-eslint.io/rules/no-unused-expressions)
+
+#### Settings
+
+```json
+{ "enforceForJSX": true }
+```
 
 ### [🛑 @typescript-eslint/no-useless-empty-export](https://typescript-eslint.io/rules/no-useless-empty-export)
 
