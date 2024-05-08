@@ -105,6 +105,9 @@ const typescript: RuleMetadata = {
       name: "@typescript-eslint/parameter-properties",
       url: "https://typescript-eslint.io/rules/parameter-properties",
       severity: "error",
+      settings: {
+        prefer: "parameter-property",
+      },
     },
     {
       name: "@typescript-eslint/prefer-enum-initializers",
