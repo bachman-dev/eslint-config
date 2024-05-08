@@ -94,13 +94,11 @@ const typescript: RuleMetadata = {
       url: "https://typescript-eslint.io/rules/no-unsafe-unary-minus",
       severity: "error",
     },
-    // TODO: no-unused-expressions
     {
       name: "@typescript-eslint/no-useless-empty-export",
       url: "https://typescript-eslint.io/rules/no-useless-empty-export",
       severity: "error",
     },
-    // TODO: Make a final decision on parameter-properties
     {
       name: "@typescript-eslint/parameter-properties",
       url: "https://typescript-eslint.io/rules/parameter-properties",

@@ -29,6 +29,14 @@ export const tsNoShadow = {
   ...jsNoShadow,
 };
 
+export const jsNoUnusedExpressions = {
+  enforceForJSX: true,
+};
+
+export const tsNoUnusedExpressions = {
+  ...jsNoUnusedExpressions,
+};
+
 export const jsNoUnusedVars = {
   vars: "all",
   args: "after-used",

@@ -386,6 +386,17 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 ### [🛑 no-unneeded-ternary](https://eslint.org/docs/latest/rules/no-unneeded-ternary)
 
+### [🛑 no-unused-expressions](https://eslint.org/docs/latest/rules/no-unused-expressions#options)
+
+#### Settings
+
+```json
+{ "enforceForJSX": true }
+```
+
+> [!NOTE]
+> See the entry for "@typescript-eslint/no-unused-expressions" for TypeScript files.
+
 ### [🛑 no-useless-call](https://eslint.org/docs/latest/rules/no-useless-call)
 
 ### [🛑 no-useless-computed-key](https://eslint.org/docs/latest/rules/no-useless-computed-key)
@@ -574,6 +585,14 @@ These rules are ESLint rule extensions provided by typescript-eslint, so they wi
 
 ```json
 { "builtinGlobals": true, "ignoreOnInitialization": true }
+```
+
+### [🛑 @typescript-eslint/no-unused-expressions](https://typescript-eslint.io/rules/no-unused-expressions)
+
+#### Settings
+
+```json
+{ "enforceForJSX": true }
 ```
 
 ### [🛑 @typescript-eslint/prefer-destructuring](https://typescript-eslint.io/rules/prefer-destructuring)
