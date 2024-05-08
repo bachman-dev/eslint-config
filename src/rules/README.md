@@ -587,6 +587,14 @@ These rules are ESLint rule extensions provided by typescript-eslint, so they wi
 { "builtinGlobals": true, "ignoreOnInitialization": true }
 ```
 
+### [🛑 @typescript-eslint/no-unused-expressions](https://typescript-eslint.io/rules/no-unused-expressions)
+
+#### Settings
+
+```json
+{ "enforceForJSX": true }
+```
+
 ### [🛑 @typescript-eslint/prefer-destructuring](https://typescript-eslint.io/rules/prefer-destructuring)
 
 #### Settings
@@ -662,14 +670,6 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 ### [🛑 @typescript-eslint/no-unnecessary-qualifier](https://typescript-eslint.io/rules/no-unnecessary-qualifier)
 
 ### [🛑 @typescript-eslint/no-unsafe-unary-minus](https://typescript-eslint.io/rules/no-unsafe-unary-minus)
-
-### [🛑 @typescript-eslint/no-unused-expressions](https://typescript-eslint.io/rules/no-unused-expressions)
-
-#### Settings
-
-```json
-{ "enforceForJSX": true }
-```
 
 ### [🛑 @typescript-eslint/no-useless-empty-export](https://typescript-eslint.io/rules/no-useless-empty-export)
 

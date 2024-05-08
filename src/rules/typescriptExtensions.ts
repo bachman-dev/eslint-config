@@ -2,6 +2,7 @@ import {
   tsMaxParams,
   tsNoMagicNumbers,
   tsNoShadow,
+  tsNoUnusedExpressions,
   tsNoUnusedVars,
   tsNoUseBeforeDefine,
   tsPreferDestructuring,
@@ -74,6 +75,12 @@ const typescriptExtensions: RuleMetadata = {
       url: "https://typescript-eslint.io/rules/no-shadow",
       severity: "error",
       settings: tsNoShadow,
+    },
+    {
+      name: "@typescript-eslint/no-unused-expressions",
+      url: "https://typescript-eslint.io/rules/no-unused-expressions",
+      severity: "error",
+      settings: tsNoUnusedExpressions,
     },
     {
       name: "@typescript-eslint/prefer-destructuring",
