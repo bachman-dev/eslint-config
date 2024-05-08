@@ -94,7 +94,6 @@ const typescript: RuleMetadata = {
       url: "https://typescript-eslint.io/rules/no-unsafe-unary-minus",
       severity: "error",
     },
-
     {
       name: "@typescript-eslint/no-useless-empty-export",
       url: "https://typescript-eslint.io/rules/no-useless-empty-export",
