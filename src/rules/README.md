@@ -394,6 +394,9 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 ### [🛑 no-useless-constructor](https://eslint.org/docs/latest/rules/no-useless-constructor)
 
+> [!NOTE]
+> For TypeScript code, this rule is enabled by typescript-eslint's "strict" configuration
+
 ### [🛑 no-useless-rename](https://eslint.org/docs/latest/rules/no-useless-rename)
 
 ### [🛑 no-useless-return](https://eslint.org/docs/latest/rules/no-useless-return)
@@ -652,6 +655,15 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 ### [🛑 @typescript-eslint/no-useless-empty-export](https://typescript-eslint.io/rules/no-useless-empty-export)
 
 ### [🛑 @typescript-eslint/parameter-properties](https://typescript-eslint.io/rules/parameter-properties)
+
+#### Settings
+
+```json
+{ "prefer": "parameter-property" }
+```
+
+> [!TIP]
+> Older projects may need some work to adhere to this rule; you can set "requireParameterProperties" to "false," but updating the code to adhere to this rule should be done sooner than later.
 
 ### [🛑 @typescript-eslint/prefer-enum-initializers](https://typescript-eslint.io/rules/prefer-enum-initializers)
 

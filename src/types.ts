@@ -9,6 +9,7 @@ export interface ConfigOptions {
   language: "javascript" | "typescript";
   allowBitwise?: boolean;
   allowConsole?: boolean;
+  requireParameterProperties?: boolean;
 }
 
 export interface RuleMetadata {

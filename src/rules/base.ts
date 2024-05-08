@@ -656,6 +656,13 @@ const baseRules: RuleMetadata = {
       name: "no-useless-constructor",
       url: "https://eslint.org/docs/latest/rules/no-useless-constructor",
       severity: "error",
+      filteredWhen: (options) => options.language === "typescript",
+      admonishments: [
+        {
+          type: "note",
+          text: `For TypeScript code, this rule is enabled by typescript-eslint's "strict" configuration`,
+        },
+      ],
     },
     {
       name: "no-useless-rename",
