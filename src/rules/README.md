@@ -76,10 +76,7 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 > [!NOTE]
 > See the entry for "@typescript-eslint/no-use-before-define" for TypeScript files.
 
-### [🔲 no-useless-assignment](https://eslint.org/docs/latest/rules/no-useless-assignment)
-
-> [!NOTE]
-> This rule is currently disabled; it will be enabled once ESLint 9 is supported.
+### [🛑 no-useless-assignment](https://eslint.org/docs/latest/rules/no-useless-assignment)
 
 ### [🛑 require-atomic-updates](https://eslint.org/docs/latest/rules/require-atomic-updates)
 
