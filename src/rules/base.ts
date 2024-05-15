@@ -109,14 +109,7 @@ const baseRules: RuleMetadata = {
     {
       name: "no-useless-assignment",
       url: "https://eslint.org/docs/latest/rules/no-useless-assignment",
-      //TODO: ESLint 9.0 Support
-      severity: "off",
-      admonishments: [
-        {
-          type: "note",
-          text: "This rule is currently disabled; it will be enabled once ESLint 9 is supported.",
-        },
-      ],
+      severity: "error",
     },
     {
       name: "require-atomic-updates",
