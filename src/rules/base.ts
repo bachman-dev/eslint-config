@@ -11,7 +11,7 @@ import type { RuleMetadata } from "../types.js";
 import noRestrictedSyntax from "../settings/noRestrictedSyntax.js";
 
 const baseRules: RuleMetadata = {
-  name: "Base (JS/TS) Rules",
+  name: "Base (JS/TS) Rules2",
   description: "These rules come from ESLint's core ruleset, covering JavaScript and some TypeScript code.",
   rules: [
     // Possible Problems
