@@ -17,13 +17,23 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
+          cache: "pnpm"
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install
+      - name: Build Rules README
+        run: pnpm build:docs
+      - name: Check If Rules README Is Clean
+        uses: CatChen/check-git-status-action@v1
+        with:
+          request-changes-if-not-clean: true
+          request-changes-comment: "The Rules README file was regenerated, but came back not-clean; please run pnpm build:docs, and commit the updated Rules README to your Pull Request. Thank you!"
       - name: Build Package
-        run: npm run build
+        run: pnpm build
       - name: Run ESLint
-        run: npm run lint:ci
+        run: pnpm lint:ci
