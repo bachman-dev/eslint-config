@@ -68,6 +68,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
   {
+    // Replace output folder if needed, e.g. "build"
     ignores: ["dist/**"],
   },
   eslint.configs.recommended,
