@@ -10,7 +10,7 @@ import {
 import type { RuleMetadata } from "../types.js";
 
 const typescriptExtensions: RuleMetadata = {
-  name: "TypeScript ESLint Extensions",
+  name: "ESLint Extensions by typescript-eslint",
   description: `These rules are ESLint rule extensions provided by typescript-eslint, so they will work properly with TypeScript files. We disable any core ESLint rules that are extended here.`,
   admonishments: [
     {
