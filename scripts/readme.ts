@@ -1,4 +1,10 @@
-import { baseRules, handledByTypescript, typescript, typescriptExtensions } from "../src/rules/index.js";
+import {
+  baseRules,
+  handledByTypescript,
+  javascriptWithinTypescript,
+  typescript,
+  typescriptExtensions,
+} from "../src/rules/index.js";
 import type { Admonishment } from "../src/types.js";
 import { join } from "path";
 import { writeFile } from "fs/promises";
@@ -78,7 +84,7 @@ ${header(Heading.Two, "Legend")}
 ${list(["🛑 Throws a Linting Error", "⚠️ Emits a Warning", "🔲 Intentionally Disabled"])}
 `;
 
-[baseRules, handledByTypescript, typescriptExtensions, typescript].forEach((group) => {
+[baseRules, handledByTypescript, javascriptWithinTypescript, typescriptExtensions, typescript].forEach((group) => {
   markdown += `${header(Heading.Two, group.name)}${paragraph(group.description)}${admonish(group.admonishments)}`;
   group.rules.forEach((rule) => {
     switch (rule.severity) {

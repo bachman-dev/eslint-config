@@ -29,5 +29,9 @@ export default tseslint.config(
     files: ["**/*.js"],
     ...tseslint.configs.disableTypeChecked,
   },
+  {
+    files: ["**/*.js"],
+    ...bachmanDev({ language: "javascript-in-typescript" }),
+  },
   eslintConfigPrettier,
 );

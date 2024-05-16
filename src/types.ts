@@ -6,7 +6,7 @@ export interface Admonishment {
 }
 
 export interface ConfigOptions {
-  language: "javascript" | "typescript";
+  language: "javascript-in-typescript" | "javascript" | "typescript";
   allowBitwise?: boolean;
   allowConsole?: boolean;
   requireParameterProperties?: boolean;

@@ -71,7 +71,7 @@ const baseRules: RuleMetadata = {
       url: "https://eslint.org/docs/latest/rules/no-unused-vars",
       severity: "error",
       settings: jsNoUnusedVars,
-      filteredWhen: (options) => options.language === "typescript",
+      filteredWhen: (options) => options.language === "typescript" || options.language === "javascript-in-typescript",
       admonishments: [
         {
           type: "tip",
@@ -494,7 +494,7 @@ const baseRules: RuleMetadata = {
       url: "https://eslint.org/docs/latest/rules/no-magic-numbers",
       severity: "error",
       settings: jsNoMagicNumbers,
-      filteredWhen: (options) => options.language === "typescript",
+      filteredWhen: (options) => options.language === "typescript" || options.language === "javascript-in-typescript",
       admonishments: [
         {
           type: "note",

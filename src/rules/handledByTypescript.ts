@@ -20,6 +20,11 @@ const handledByTypescript: RuleMetadata = {
       url: "https://eslint.org/docs/latest/rules/no-redeclare",
       severity: "off",
     },
+    {
+      name: "no-undef",
+      url: "https://eslint.org/docs/latest/rules/no-undef",
+      severity: "off",
+    },
   ],
 };
 

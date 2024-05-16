@@ -506,6 +506,28 @@ These are ESLint rules normally enabled by their "recommended" configuration tha
 
 ### [🔲 no-redeclare](https://eslint.org/docs/latest/rules/no-redeclare)
 
+### [🔲 no-undef](https://eslint.org/docs/latest/rules/no-undef)
+
+## JavaScript within TypeScript
+
+This ruleset disables some typescript-eslint rules that may cause incorrect fixes in JavaScript files; it also enables ESLint rules for JavaScript files that are only available with type checking in typescript-eslint.
+
+### [🔲 @typescript-eslint/explicit-function-return-type](https://typescript-eslint.io/rules/explicit-function-return-type)
+
+### [🔲 @typescript-eslint/explicit-member-accessibility](https://typescript-eslint.io/rules/explicit-member-accessibility)
+
+### [🔲 @typescript-eslint/explicit-module-boundary-types](https://typescript-eslint.io/rules/explicit-module-boundary-types)
+
+### [🛑 consistent-return](https://eslint.org/docs/latest/rules/consistent-return)
+
+### [🛑 default-case](https://eslint.org/docs/latest/rules/default-case)
+
+### [🛑 dot-notation](https://eslint.org/docs/latest/rules/dot-notation)
+
+### [🛑 no-implied-eval](https://eslint.org/docs/latest/rules/no-implied-eval)
+
+### [🛑 no-throw-literal](https://eslint.org/docs/latest/rules/no-throw-literal)
+
 ## TypeScript ESLint Extensions
 
 These rules are ESLint rule extensions provided by typescript-eslint, so they will work properly with TypeScript files. We disable any core ESLint rules that are extended here.
