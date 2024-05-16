@@ -26,9 +26,8 @@
     "build": "tsc",
     "build:docs": "tsx ./scripts/readme.ts && prettier --write ./src/rules/README.md",
     "lint": "tsc && eslint . && prettier --check .",
-    "lint:ci": "eslint . && prettier --check .",
-    "lint:fix": "tsc && eslint --fix . && prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:ci": "eslint --fix . && prettier --write .",
+    "lint:fix": "tsc && eslint --fix . && prettier --write ."
   },
   "peerDependencies": {
     "eslint": "^8.57.0",

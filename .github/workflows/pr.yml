@@ -28,12 +28,12 @@ jobs:
         run: pnpm install
       - name: Build Rules README
         run: pnpm build:docs
-      - name: Check If Rules README Is Clean
+      - name: Run ESLint
+        run: pnpm lint:ci
+      - name: Check If Repo Is Clean
         uses: CatChen/check-git-status-action@v1
         with:
           request-changes-if-not-clean: true
-          request-changes-comment: "The Rules README file was regenerated, but came back not-clean; please run pnpm build:docs, and commit the updated Rules README to your Pull Request. Thank you!"
+          request-changes-comment: "The Pull Request Branch is not clean; this is usually caused by either not running Prettier, or not generating the Rules README. Run pnpm lint:fix and pnpm build:docs on the branch, and commit any changes to the Pull Request. Thank you!"
       - name: Build Package
         run: pnpm build
-      - name: Run ESLint
-        run: pnpm lint:ci
