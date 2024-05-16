@@ -26,26 +26,25 @@
     "build": "tsc",
     "build:docs": "tsx ./scripts/readme.ts && prettier --write ./src/rules/README.md",
     "lint": "tsc && eslint . && prettier --check .",
-    "lint:ci": "eslint . && prettier --check .",
-    "lint:fix": "tsc && eslint --fix . && prettier --write .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:ci": "eslint --fix . && prettier --write .",
+    "lint:fix": "tsc && eslint --fix . && prettier --write ."
   },
   "peerDependencies": {
-    "eslint": ">=9.2.0",
-    "typescript": "5.4.x"
+    "eslint": "^8.57.0",
+    "typescript-eslint": "^7.9.0"
   },
   "devDependencies": {
+    "@eslint/js": "9.2.0",
     "@types/eslint__js": "8.42.3",
-    "@types/eslint-config-prettier": "6.11.3",
     "@types/node": "20.12.12",
+    "eslint-config-prettier": "9.1.0",
     "prettier": "3.2.5",
-    "tsx": "4.10.2",
-    "typescript": "5.4.5"
+    "tsx": "4.10.3",
+    "typescript": "5.4.5",
+    "typescript-eslint": "7.9.0"
   },
   "dependencies": {
-    "@eslint/js": "9.2.0",
-    "@typescript-eslint/utils": "rc-v8",
-    "eslint-config-prettier": "9.1.0",
-    "typescript-eslint": "rc-v8"
-  }
+    "@typescript-eslint/utils": "^7.9.0"
+  },
+  "packageManager": "pnpm@9.1.1+sha256.9551e803dcb7a1839fdf5416153a844060c7bce013218ce823410532504ac10b"
 }

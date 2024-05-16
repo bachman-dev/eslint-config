@@ -1,4 +1,6 @@
-import { config } from "./dist/index.js";
+import bachmanDev from "./dist/index.js";
+import eslint from "@eslint/js";
+import eslintConfigPrettier from "eslint-config-prettier";
 import tseslint from "typescript-eslint";
 
 /* NOTE: This is the ESLint Config for this project in particular. See src/index.ts to learn more about this shared
@@ -11,11 +13,12 @@ export default tseslint.config(
   {
     ignores: ["dist/**"],
   },
+  eslint.configs.recommended,
+  ...tseslint.configs.strictTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
+  bachmanDev({ language: "typescript" }),
   {
-    extends: config({ language: "typescript", allowConsole: true }),
-    files: ["**/*.ts"],
     languageOptions: {
-      parser: tseslint.parser,
       parserOptions: {
         project: "tsconfig.eslint.json",
         tsconfigRootDir: import.meta.dirname,
@@ -23,7 +26,12 @@ export default tseslint.config(
     },
   },
   {
-    extends: config({ language: "javascript" }),
     files: ["**/*.js"],
+    ...tseslint.configs.disableTypeChecked,
   },
+  {
+    files: ["**/*.js"],
+    ...bachmanDev({ language: "javascript-in-typescript" }),
+  },
+  eslintConfigPrettier,
 );

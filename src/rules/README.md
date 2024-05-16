@@ -15,9 +15,6 @@ Below are all the rules in their respective categories this configuration works 
 
 These rules come from ESLint's core ruleset, covering JavaScript and some TypeScript code.
 
-> [!NOTE]
-> We extend from ESLint's "recommended" lint rules, and override default settings on a couple of them.
-
 ### [🛑 array-callback-return](https://eslint.org/docs/latest/rules/array-callback-return)
 
 ### [🛑 no-await-in-loop](https://eslint.org/docs/latest/rules/no-await-in-loop)
@@ -502,13 +499,146 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 These are ESLint rules normally enabled by their "recommended" configuration that can be disabled for TypeScript files since they are handled by the TypeScript Compiler.
 
+> [!NOTE]
+> These rules/settings are only applied when the "language" config option is set to "typescript" .
+
 ### [🔲 no-dupe-class-members](https://eslint.org/docs/latest/rules/no-dupe-class-members)
 
 ### [🔲 no-redeclare](https://eslint.org/docs/latest/rules/no-redeclare)
 
-## TypeScript ESLint Extensions
+### [🔲 no-undef](https://eslint.org/docs/latest/rules/no-undef)
 
-These rules are ESLint rule extensions provided by typescript-eslint, so they will work properly with TypeScript files. You'll see some core ESLint rules disabled here if they were enabled in its "recommended" config, alongside the enabled extension rules.
+## JavaScript within TypeScript
+
+This ruleset disables some typescript-eslint rules that may cause incorrect fixes in JavaScript files; it also enables ESLint rules for JavaScript files that are only available with type checking in typescript-eslint.
+
+### [🔲 @typescript-eslint/explicit-function-return-type](https://typescript-eslint.io/rules/explicit-function-return-type)
+
+### [🔲 @typescript-eslint/explicit-member-accessibility](https://typescript-eslint.io/rules/explicit-member-accessibility)
+
+### [🔲 @typescript-eslint/explicit-module-boundary-types](https://typescript-eslint.io/rules/explicit-module-boundary-types)
+
+### [🛑 consistent-return](https://eslint.org/docs/latest/rules/consistent-return)
+
+### [🛑 default-case](https://eslint.org/docs/latest/rules/default-case)
+
+### [🛑 dot-notation](https://eslint.org/docs/latest/rules/dot-notation)
+
+### [🛑 no-implied-eval](https://eslint.org/docs/latest/rules/no-implied-eval)
+
+### [🛑 no-throw-literal](https://eslint.org/docs/latest/rules/no-throw-literal)
+
+## TypeScript Rules
+
+These rules come from typescript-eslint, and are specifically tailored for linting TypeScript code.
+
+> [!NOTE]
+> These rules/settings are only applied when the "language" config option is set to "typescript" .
+
+### [🛑 @typescript-eslint/consistent-type-exports](https://typescript-eslint.io/rules/consistent-type-exports)
+
+#### Settings
+
+```json
+{ "fixMixedExportsWithInlineTypeSpecifier": true }
+```
+
+### [🛑 @typescript-eslint/consistent-type-imports](https://typescript-eslint.io/rules/consistent-type-imports)
+
+#### Settings
+
+```json
+{ "prefer": "type-imports", "disallowTypeAnnotations": true, "fixStyle": "inline-type-imports" }
+```
+
+### [🛑 @typescript-eslint/explicit-function-return-type](https://typescript-eslint.io/rules/explicit-function-return-type)
+
+### [🛑 @typescript-eslint/explicit-member-accessibility](https://typescript-eslint.io/rules/explicit-member-accessibility)
+
+### [🛑 @typescript-eslint/explicit-module-boundary-types](https://typescript-eslint.io/rules/explicit-module-boundary-types)
+
+### [🛑 @typescript-eslint/member-ordering](https://typescript-eslint.io/rules/member-ordering)
+
+#### Settings
+
+(omitted to save space)
+
+> [!TIP]
+> See [memberOrdering.ts](/src/settings/memberOrdering.ts) for the member ordering rules.
+
+### [🛑 @typescript-eslint/method-signature-style](https://typescript-eslint.io/rules/method-signature-style)
+
+### [🛑 @typescript-eslint/naming-convention](https://typescript-eslint.io/rules/naming-convention)
+
+#### Settings
+
+(omitted to save space)
+
+> [!TIP]
+> See [namingConvention.ts](/src/settings/namingConvention.ts) for the exact naming convention.
+
+### [🛑 @typescript-eslint/no-import-type-side-effects](https://typescript-eslint.io/rules/no-import-type-side-effects)
+
+### [🛑 @typescript-eslint/no-require-imports](https://typescript-eslint.io/rules/no-require-imports)
+
+### [🛑 @typescript-eslint/no-unnecessary-qualifier](https://typescript-eslint.io/rules/no-unnecessary-qualifier)
+
+### [🛑 @typescript-eslint/no-unsafe-unary-minus](https://typescript-eslint.io/rules/no-unsafe-unary-minus)
+
+### [🛑 @typescript-eslint/no-useless-empty-export](https://typescript-eslint.io/rules/no-useless-empty-export)
+
+### [🛑 @typescript-eslint/parameter-properties](https://typescript-eslint.io/rules/parameter-properties)
+
+#### Settings
+
+```json
+{ "prefer": "parameter-property" }
+```
+
+> [!TIP]
+> Older projects may need some work to adhere to this rule; you can set "requireParameterProperties" to "false," but updating the code to adhere to this rule should be done sooner than later.
+
+### [🛑 @typescript-eslint/prefer-enum-initializers](https://typescript-eslint.io/rules/prefer-enum-initializers)
+
+### [🛑 @typescript-eslint/prefer-find](https://typescript-eslint.io/rules/prefer-find)
+
+### [🛑 @typescript-eslint/prefer-readonly](https://typescript-eslint.io/rules/prefer-readonly)
+
+### [🛑 @typescript-eslint/prefer-regexp-exec](https://typescript-eslint.io/rules/prefer-regexp-exec)
+
+### [🛑 @typescript-eslint/promise-function-async](https://typescript-eslint.io/rules/promise-function-async)
+
+### [🛑 @typescript-eslint/require-array-sort-compare](https://typescript-eslint.io/rules/require-array-sort-compare)
+
+### [🛑 @typescript-eslint/restrict-template-expressions](https://typescript-eslint.io/rules/restrict-template-expressions)
+
+#### Settings
+
+```json
+{ "allowNumber": true, "allowBoolean": true }
+```
+
+> [!NOTE]
+> Although typescript-eslint's "strictTypeChecked" configuration makes this rule rather... strict, we do allow numbers and booleans to be in template literals as their stringified versions are easy enough to read.
+
+### [🛑 @typescript-eslint/sort-type-constituents](https://typescript-eslint.io/rules/sort-type-constituents)
+
+### [🛑 @typescript-eslint/strict-boolean-expressions](https://typescript-eslint.io/rules/strict-boolean-expressions)
+
+### [🛑 @typescript-eslint/switch-exhaustiveness-check](https://typescript-eslint.io/rules/switch-exhaustiveness-check)
+
+#### Settings
+
+```json
+{ "allowDefaultCaseForExhaustiveSwitch": true, "requireDefaultForNonUnion": true }
+```
+
+## ESLint Extensions by typescript-eslint
+
+These rules are ESLint rule extensions provided by typescript-eslint, so they will work properly with TypeScript files. We disable any core ESLint rules that are extended here.
+
+> [!NOTE]
+> These rules/settings are only applied when the "language" config option is set to "typescript" .
 
 ### [🔲 no-unused-vars](https://eslint.org/docs/latest/rules/no-unused-vars)
 
@@ -613,108 +743,3 @@ These rules are ESLint rule extensions provided by typescript-eslint, so they wi
 
 > [!NOTE]
 > We require Promises to be "awaited" for better stack tracing, and because it's now slower in many JS runtimes (V8 for instance) to not await them. You can think of this rule acting as the opposite of ESLint's "no-return-await" rule.
-
-## TypeScript Rules
-
-These rules come from typescript-eslint, and are specifically tailored for linting TypeScript code.
-
-> [!NOTE]
-> We extend from typescript-eslint's "strictTypeChecked" and "stylisticTypeChecked" lint rules, and override default settings on a couple of them.
-
-### [🛑 @typescript-eslint/consistent-type-exports](https://typescript-eslint.io/rules/consistent-type-exports)
-
-#### Settings
-
-```json
-{ "fixMixedExportsWithInlineTypeSpecifier": true }
-```
-
-### [🛑 @typescript-eslint/consistent-type-imports](https://typescript-eslint.io/rules/consistent-type-imports)
-
-#### Settings
-
-```json
-{ "prefer": "type-imports", "disallowTypeAnnotations": true, "fixStyle": "inline-type-imports" }
-```
-
-### [🛑 @typescript-eslint/explicit-function-return-type](https://typescript-eslint.io/rules/explicit-function-return-type)
-
-### [🛑 @typescript-eslint/explicit-member-accessibility](https://typescript-eslint.io/rules/explicit-member-accessibility)
-
-### [🛑 @typescript-eslint/explicit-module-boundary-types](https://typescript-eslint.io/rules/explicit-module-boundary-types)
-
-### [🛑 @typescript-eslint/member-ordering](https://typescript-eslint.io/rules/member-ordering)
-
-#### Settings
-
-(omitted to save space)
-
-> [!TIP]
-> See [memberOrdering.ts](/src/settings/memberOrdering.ts) for the member ordering rules.
-
-### [🛑 @typescript-eslint/method-signature-style](https://typescript-eslint.io/rules/method-signature-style)
-
-### [🛑 @typescript-eslint/naming-convention](https://typescript-eslint.io/rules/naming-convention)
-
-#### Settings
-
-(omitted to save space)
-
-> [!TIP]
-> See [namingConvention.ts](/src/settings/namingConvention.ts) for the exact naming convention.
-
-### [🛑 @typescript-eslint/no-import-type-side-effects](https://typescript-eslint.io/rules/no-import-type-side-effects)
-
-### [🛑 @typescript-eslint/no-require-imports](https://typescript-eslint.io/rules/no-require-imports)
-
-### [🛑 @typescript-eslint/no-unnecessary-qualifier](https://typescript-eslint.io/rules/no-unnecessary-qualifier)
-
-### [🛑 @typescript-eslint/no-unsafe-unary-minus](https://typescript-eslint.io/rules/no-unsafe-unary-minus)
-
-### [🛑 @typescript-eslint/no-useless-empty-export](https://typescript-eslint.io/rules/no-useless-empty-export)
-
-### [🛑 @typescript-eslint/parameter-properties](https://typescript-eslint.io/rules/parameter-properties)
-
-#### Settings
-
-```json
-{ "prefer": "parameter-property" }
-```
-
-> [!TIP]
-> Older projects may need some work to adhere to this rule; you can set "requireParameterProperties" to "false," but updating the code to adhere to this rule should be done sooner than later.
-
-### [🛑 @typescript-eslint/prefer-enum-initializers](https://typescript-eslint.io/rules/prefer-enum-initializers)
-
-### [🛑 @typescript-eslint/prefer-find](https://typescript-eslint.io/rules/prefer-find)
-
-### [🛑 @typescript-eslint/prefer-readonly](https://typescript-eslint.io/rules/prefer-readonly)
-
-### [🛑 @typescript-eslint/prefer-regexp-exec](https://typescript-eslint.io/rules/prefer-regexp-exec)
-
-### [🛑 @typescript-eslint/promise-function-async](https://typescript-eslint.io/rules/promise-function-async)
-
-### [🛑 @typescript-eslint/require-array-sort-compare](https://typescript-eslint.io/rules/require-array-sort-compare)
-
-### [🛑 @typescript-eslint/restrict-template-expressions](https://typescript-eslint.io/rules/restrict-template-expressions)
-
-#### Settings
-
-```json
-{ "allowNumber": true, "allowBoolean": true }
-```
-
-> [!NOTE]
-> Although typescript-eslint's "strictTypeChecked" configuration makes this rule rather... strict, we do allow numbers and booleans to be in template literals as their stringified versions are easy enough to read.
-
-### [🛑 @typescript-eslint/sort-type-constituents](https://typescript-eslint.io/rules/sort-type-constituents)
-
-### [🛑 @typescript-eslint/strict-boolean-expressions](https://typescript-eslint.io/rules/strict-boolean-expressions)
-
-### [🛑 @typescript-eslint/switch-exhaustiveness-check](https://typescript-eslint.io/rules/switch-exhaustiveness-check)
-
-#### Settings
-
-```json
-{ "allowDefaultCaseForExhaustiveSwitch": true, "requireDefaultForNonUnion": true }
-```
