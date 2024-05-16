@@ -15,9 +15,6 @@ Below are all the rules in their respective categories this configuration works 
 
 These rules come from ESLint's core ruleset, covering JavaScript and some TypeScript code.
 
-> [!NOTE]
-> We extend from ESLint's "recommended" lint rules, and override default settings on a couple of them.
-
 ### [🛑 array-callback-return](https://eslint.org/docs/latest/rules/array-callback-return)
 
 ### [🛑 no-await-in-loop](https://eslint.org/docs/latest/rules/no-await-in-loop)
@@ -76,7 +73,10 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 > [!NOTE]
 > See the entry for "@typescript-eslint/no-use-before-define" for TypeScript files.
 
-### [🛑 no-useless-assignment](https://eslint.org/docs/latest/rules/no-useless-assignment)
+### [🔲 no-useless-assignment](https://eslint.org/docs/latest/rules/no-useless-assignment)
+
+> [!NOTE]
+> This rule is currently disabled; it will be enabled once ESLint 9 is supported.
 
 ### [🛑 require-atomic-updates](https://eslint.org/docs/latest/rules/require-atomic-updates)
 
@@ -505,7 +505,7 @@ These are ESLint rules normally enabled by their "recommended" configuration tha
 
 ## TypeScript ESLint Extensions
 
-These rules are ESLint rule extensions provided by typescript-eslint, so they will work properly with TypeScript files. You'll see some core ESLint rules disabled here if they were enabled in its "recommended" config, alongside the enabled extension rules.
+These rules are ESLint rule extensions provided by typescript-eslint, so they will work properly with TypeScript files. We disable any core ESLint rules that are extended here.
 
 ### [🔲 no-unused-vars](https://eslint.org/docs/latest/rules/no-unused-vars)
 
@@ -614,9 +614,6 @@ These rules are ESLint rule extensions provided by typescript-eslint, so they wi
 ## TypeScript Rules
 
 These rules come from typescript-eslint, and are specifically tailored for linting TypeScript code.
-
-> [!NOTE]
-> We extend from typescript-eslint's "strictTypeChecked" and "stylisticTypeChecked" lint rules, and override default settings on a couple of them.
 
 ### [🛑 @typescript-eslint/consistent-type-exports](https://typescript-eslint.io/rules/consistent-type-exports)
 
