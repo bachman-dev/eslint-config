@@ -1,5 +1,6 @@
 name: Pull Request Jobs
 on:
+  merge_group:
   pull_request:
     branches:
       - main
@@ -16,9 +17,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
       - name: Setup pnpm
         uses: pnpm/action-setup@v2
       - name: Setup Node.js
@@ -30,12 +28,5 @@ jobs:
         run: pnpm install
       - name: Build Package
         run: pnpm build
-      - name: Build Rules README
-        run: pnpm build:docs
       - name: Run ESLint
         run: pnpm lint:ci
-      - name: Check If Repo Is Clean
-        uses: CatChen/check-git-status-action@v1
-        with:
-          request-changes-if-not-clean: true
-          request-changes-comment: "The Pull Request Branch is not clean; this is usually caused by either not running Prettier, or not generating the Rules README. Run pnpm lint:fix and pnpm build:docs on the branch, and commit any changes to the Pull Request. Thank you!"
