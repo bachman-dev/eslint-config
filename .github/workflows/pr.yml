@@ -26,6 +26,8 @@ jobs:
           cache: "pnpm"
       - name: Install Dependencies
         run: pnpm install
+      - name: Build Package
+        run: pnpm build
       - name: Build Rules README
         run: pnpm build:docs
       - name: Run ESLint
@@ -35,5 +37,3 @@ jobs:
         with:
           request-changes-if-not-clean: true
           request-changes-comment: "The Pull Request Branch is not clean; this is usually caused by either not running Prettier, or not generating the Rules README. Run pnpm lint:fix and pnpm build:docs on the branch, and commit any changes to the Pull Request. Thank you!"
-      - name: Build Package
-        run: pnpm build
