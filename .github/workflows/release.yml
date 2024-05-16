@@ -30,6 +30,6 @@ jobs:
       - name: Lint Code
         run: pnpm lint:ci
       - name: Publish Library
-        run: pnpm publish --access=public
+        run: pnpm publish --access=public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
