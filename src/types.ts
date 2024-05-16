@@ -1,4 +1,4 @@
-import type { TSESLint } from "@typescript-eslint/utils";
+import type { SharedConfig } from "@typescript-eslint/utils/ts-eslint";
 
 export interface Admonishment {
   text: string;
@@ -21,24 +21,22 @@ export interface RuleMetadata {
 
 export interface Rule {
   name: string;
-  severity: TSESLint.SharedConfig.SeverityString;
+  severity: SharedConfig.SeverityString;
   url: string;
   admonishments?: [Admonishment, ...Admonishment[]];
-  filteredWhen?: RuleFilter;
+  filteredWhen?: (options: ConfigOptions) => boolean;
   settings?: unknown[] | object | string;
 }
 
-export type RuleFilter = (options: ConfigOptions) => boolean;
-
-export function toRulesRecord(options: ConfigOptions, ...groups: RuleMetadata[]): TSESLint.SharedConfig.RulesRecord {
-  const rules: TSESLint.SharedConfig.RulesRecord = {};
+export function toRulesRecord(options: ConfigOptions, ...groups: RuleMetadata[]): SharedConfig.RulesRecord {
+  const rules: SharedConfig.RulesRecord = {};
   groups.forEach((group) => {
     const filteredRules = group.rules.filter((rule) => rule.filteredWhen?.(options) !== true);
     filteredRules.forEach((rule) => {
       if (typeof rule.settings === "undefined") {
         rules[rule.name] = rule.severity;
       } else {
-        const ruleLevelAndOptions: TSESLint.SharedConfig.RuleLevelAndOptions = [rule.severity];
+        const ruleLevelAndOptions: SharedConfig.RuleLevelAndOptions = [rule.severity];
         if (Array.isArray(rule.settings)) {
           ruleLevelAndOptions.push(...rule.settings);
         } else {
