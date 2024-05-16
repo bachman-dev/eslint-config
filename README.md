@@ -81,9 +81,21 @@ export default [
 ];
 ```
 
+## Rulesets
+
+The following rulesets are applied to your ESLint configuration depending on language:
+
+- All Languages: [Base (JS/TS) Rules](/src/rules/README.md#base-jsts-rules)
+- `typescript`: [Handled by TypeScript](/src/rules/README.md#handled-by-typescript), [TypeScript Rules](/src/rules/README.md#typescript-rules), [ESLint Extensions by typescript-eslint](/src/rules/README.md#eslint-extensions-by-typescript-eslint)
+- `javascript-in-typescript`: [JavaScript within TypeScript](/src/rules/README.md#javascript-within-typescript)
+
 ## Configuration
 
 The rules enabled by this configuration are highly opinionated, but some exceptions are made for niche projects.
+
+### `language`
+
+Typically either set to `javascript` or `typescript` when configuring across all files. For projects with a mixture of JavaScript and TypeScript, you should include the config with the `language` set to `javascript-in-typescript`, with a `files` property on the config object limited to only JavaScript files. See the above Installation instructions for an example.
 
 ### `allowBitwise`
 
