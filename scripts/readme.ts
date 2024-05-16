@@ -84,7 +84,7 @@ ${header(Heading.Two, "Legend")}
 ${list(["🛑 Throws a Linting Error", "⚠️ Emits a Warning", "🔲 Intentionally Disabled"])}
 `;
 
-[baseRules, handledByTypescript, javascriptWithinTypescript, typescriptExtensions, typescript].forEach((group) => {
+[baseRules, handledByTypescript, javascriptWithinTypescript, typescript, typescriptExtensions].forEach((group) => {
   markdown += `${header(Heading.Two, group.name)}${paragraph(group.description)}${admonish(group.admonishments)}`;
   group.rules.forEach((rule) => {
     switch (rule.severity) {
