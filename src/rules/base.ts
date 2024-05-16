@@ -13,12 +13,6 @@ import noRestrictedSyntax from "../settings/noRestrictedSyntax.js";
 const baseRules: RuleMetadata = {
   name: "Base (JS/TS) Rules",
   description: "These rules come from ESLint's core ruleset, covering JavaScript and some TypeScript code.",
-  admonishments: [
-    {
-      type: "note",
-      text: `We extend from ESLint's "recommended" lint rules, and override default settings on a couple of them.`,
-    },
-  ],
   rules: [
     // Possible Problems
     {
@@ -109,7 +103,14 @@ const baseRules: RuleMetadata = {
     {
       name: "no-useless-assignment",
       url: "https://eslint.org/docs/latest/rules/no-useless-assignment",
-      severity: "error",
+      //TODO: ESLint 9.0 Support
+      severity: "off",
+      admonishments: [
+        {
+          type: "note",
+          text: "This rule is currently disabled; it will be enabled once ESLint 9 is supported.",
+        },
+      ],
     },
     {
       name: "require-atomic-updates",

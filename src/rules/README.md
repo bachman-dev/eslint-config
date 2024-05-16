@@ -499,6 +499,9 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 These are ESLint rules normally enabled by their "recommended" configuration that can be disabled for TypeScript files since they are handled by the TypeScript Compiler.
 
+> [!NOTE]
+> These rules/settings are only applied when the "language" config option is set to "typescript" .
+
 ### [🔲 no-dupe-class-members](https://eslint.org/docs/latest/rules/no-dupe-class-members)
 
 ### [🔲 no-redeclare](https://eslint.org/docs/latest/rules/no-redeclare)
@@ -506,6 +509,9 @@ These are ESLint rules normally enabled by their "recommended" configuration tha
 ## TypeScript ESLint Extensions
 
 These rules are ESLint rule extensions provided by typescript-eslint, so they will work properly with TypeScript files. We disable any core ESLint rules that are extended here.
+
+> [!NOTE]
+> These rules/settings are only applied when the "language" config option is set to "typescript" .
 
 ### [🔲 no-unused-vars](https://eslint.org/docs/latest/rules/no-unused-vars)
 
@@ -614,6 +620,9 @@ These rules are ESLint rule extensions provided by typescript-eslint, so they wi
 ## TypeScript Rules
 
 These rules come from typescript-eslint, and are specifically tailored for linting TypeScript code.
+
+> [!NOTE]
+> These rules/settings are only applied when the "language" config option is set to "typescript" .
 
 ### [🛑 @typescript-eslint/consistent-type-exports](https://typescript-eslint.io/rules/consistent-type-exports)
 

@@ -8,7 +8,7 @@ const typescript: RuleMetadata = {
   admonishments: [
     {
       type: "note",
-      text: `We extend from typescript-eslint's "strictTypeChecked" and "stylisticTypeChecked" lint rules, and override default settings on a couple of them.`,
+      text: `These rules/settings are only applied when the "language" config option is set to "typescript" .`,
     },
   ],
   rules: [

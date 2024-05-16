@@ -11,7 +11,13 @@ import type { RuleMetadata } from "../types.js";
 
 const typescriptExtensions: RuleMetadata = {
   name: "TypeScript ESLint Extensions",
-  description: `These rules are ESLint rule extensions provided by typescript-eslint, so they will work properly with TypeScript files. You'll see some core ESLint rules disabled here if they were enabled in its "recommended" config, alongside the enabled extension rules.`,
+  description: `These rules are ESLint rule extensions provided by typescript-eslint, so they will work properly with TypeScript files. We disable any core ESLint rules that are extended here.`,
+  admonishments: [
+    {
+      type: "note",
+      text: `These rules/settings are only applied when the "language" config option is set to "typescript" .`,
+    },
+  ],
   rules: [
     // Possible Problems
     {
