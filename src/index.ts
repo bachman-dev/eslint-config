@@ -16,3 +16,5 @@ export default function bachmanDev(options: ConfigOptions): FlatConfig.Config {
   }
   return flatConfig;
 }
+
+export type { ConfigOptions };
