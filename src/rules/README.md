@@ -481,6 +481,9 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 ### [🛑 require-await](https://eslint.org/docs/latest/rules/require-await)
 
+> [!NOTE]
+> For TypeScript code, this rule is enabled by typescript-eslint's "recommended-type-checked" configuration
+
 ### [🛑 require-unicode-regexp](https://eslint.org/docs/latest/rules/require-unicode-regexp)
 
 ### [🛑 sort-imports](https://eslint.org/docs/latest/rules/sort-imports)
