@@ -802,6 +802,13 @@ const baseRules: RuleMetadata = {
       name: "require-await",
       url: "https://eslint.org/docs/latest/rules/require-await",
       severity: "error",
+      filteredWhen: (options) => options.language === "typescript",
+      admonishments: [
+        {
+          type: "note",
+          text: `For TypeScript code, this rule is enabled by typescript-eslint's "recommended-type-checked" configuration`,
+        },
+      ],
     },
     {
       name: "require-unicode-regexp",
