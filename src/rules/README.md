@@ -413,6 +413,12 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 ### [🛑 no-void](https://eslint.org/docs/latest/rules/no-void)
 
+#### Settings
+
+```json
+{ "allowAsStatement": true }
+```
+
 ### [🛑 no-warning-comments](https://eslint.org/docs/latest/rules/no-warning-comments)
 
 #### Settings
