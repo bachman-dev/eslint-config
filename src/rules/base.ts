@@ -690,6 +690,9 @@ const baseRules: RuleMetadata = {
       name: "no-void",
       url: "https://eslint.org/docs/latest/rules/no-void",
       severity: "error",
+      settings: {
+        allowAsStatement: true,
+      },
     },
     {
       name: "no-warning-comments",
