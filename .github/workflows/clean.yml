@@ -34,8 +34,9 @@ jobs:
         run: pnpm build:docs
       - name: Run ESLint
         run: pnpm lint:ci
-      - name: Check If Repo Is Clean
+      - name: Check If Docs Are Clean
         uses: CatChen/check-git-status-action@v1
         with:
+          targets: src/rules/README.md
           request-changes-if-not-clean: true
-          request-changes-comment: "The Pull Request Branch is not clean; this is usually caused by either not running Prettier, or not generating the Rules README. Run pnpm lint:fix and pnpm build:docs on the branch, and commit any changes to the Pull Request. Thank you!"
+          request-changes-comment: "The rules' README file is not clean; this is usually caused by changes to the enabled/disabled rules and/or their settings. Please run 'pnpm build:docs' and commit the changed file. Thank you!"
