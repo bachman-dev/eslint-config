@@ -30,7 +30,7 @@
     "lint:fix": "tsc && eslint --fix . && prettier --write ."
   },
   "peerDependencies": {
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.0 || ^9.0.0",
     "typescript-eslint": "^7.9.0"
   },
   "devDependencies": {
