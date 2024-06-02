@@ -39,7 +39,7 @@
     "@types/node": "20.12.12",
     "eslint-config-prettier": "9.1.0",
     "prettier": "3.2.5",
-    "tsx": "4.10.3",
+    "tsx": "4.11.0",
     "typescript": "5.4.5",
     "typescript-eslint": "7.11.0"
   },
