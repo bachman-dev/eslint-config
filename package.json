@@ -23,11 +23,11 @@
     "dist/**/*.{js,d.ts}"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsup --dts --format esm src/index.ts",
     "build:docs": "tsx ./scripts/readme.ts && prettier --write ./src/rules/README.md",
-    "lint": "tsc && eslint . && prettier --check .",
+    "lint": "tsup --dts --format esm src/index.ts && eslint . && prettier --check .",
     "lint:ci": "eslint --fix . && prettier --write .",
-    "lint:fix": "tsc && eslint --fix . && prettier --write ."
+    "lint:fix": "tsup --dts --format esm src/index.ts && eslint --fix . && prettier --write ."
   },
   "peerDependencies": {
     "eslint": "^9.8.0",
@@ -39,6 +39,7 @@
     "@types/node": "20.14.14",
     "eslint-config-prettier": "9.1.0",
     "prettier": "3.3.3",
+    "tsup": "8.2.4",
     "tsx": "4.16.5",
     "typescript": "5.5.4",
     "typescript-eslint": "8.0.0"
