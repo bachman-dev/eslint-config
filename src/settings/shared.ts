@@ -45,7 +45,7 @@ export const jsNoUnusedVars = {
   argsIgnorePattern: "^_",
   caughtErrorsIgnorePattern: "^_",
   destructuredArrayIgnorePattern: "^_",
-  // TODO: ESLint 9.0 support -- reportUsedIgnorePattern: true,
+  reportUsedIgnorePattern: true,
   varsIgnorePattern: "^_",
 };
 
