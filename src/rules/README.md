@@ -202,14 +202,6 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 > [!NOTE]
 > See the entry for "@typescript-eslint/max-params" for TypeScript files.
 
-### [🛑 multiline-comment-style](https://eslint.org/docs/latest/rules/multiline-comment-style)
-
-#### Settings
-
-```json
-"bare-block"
-```
-
 ### [🛑 new-cap](https://eslint.org/docs/latest/rules/new-cap)
 
 #### Settings
@@ -499,8 +491,6 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 ### [🛑 symbol-description](https://eslint.org/docs/latest/rules/symbol-description)
 
 ### [🛑 yoda](https://eslint.org/docs/latest/rules/yoda)
-
-### [🛑 line-comment-position](https://eslint.org/docs/latest/rules/line-comment-position)
 
 ### [🛑 unicode-bom](https://eslint.org/docs/latest/rules/unicode-bom)
 

@@ -308,12 +308,6 @@ const baseRules: RuleMetadata = {
       ],
     },
     {
-      name: "multiline-comment-style",
-      url: "https://eslint.org/docs/latest/rules/multiline-comment-style",
-      severity: "error",
-      settings: "bare-block",
-    },
-    {
       name: "new-cap",
       url: "https://eslint.org/docs/latest/rules/new-cap",
       severity: "error",
@@ -840,11 +834,6 @@ const baseRules: RuleMetadata = {
     },
 
     // Formatting
-    {
-      name: "line-comment-position",
-      url: "https://eslint.org/docs/latest/rules/line-comment-position",
-      severity: "error",
-    },
     {
       name: "unicode-bom",
       url: "https://eslint.org/docs/latest/rules/unicode-bom",
