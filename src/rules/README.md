@@ -49,6 +49,7 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
   "argsIgnorePattern": "^_",
   "caughtErrorsIgnorePattern": "^_",
   "destructuredArrayIgnorePattern": "^_",
+  "reportUsedIgnorePattern": true,
   "varsIgnorePattern": "^_"
 }
 ```
@@ -58,9 +59,6 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 > [!NOTE]
 > See the entry for "@typescript-eslint/no-unused-vars" for TypeScript files.
-
-> [!NOTE]
-> When ESLint 9 is supported, this rule will also report any variables with underscores (\_) that are used.
 
 ### [🛑 no-use-before-define](https://eslint.org/docs/latest/rules/no-use-before-define)
 
@@ -73,10 +71,7 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 > [!NOTE]
 > See the entry for "@typescript-eslint/no-use-before-define" for TypeScript files.
 
-### [🔲 no-useless-assignment](https://eslint.org/docs/latest/rules/no-useless-assignment)
-
-> [!NOTE]
-> This rule is currently disabled; it will be enabled once ESLint 9 is supported.
+### [🛑 no-useless-assignment](https://eslint.org/docs/latest/rules/no-useless-assignment)
 
 ### [🛑 require-atomic-updates](https://eslint.org/docs/latest/rules/require-atomic-updates)
 
@@ -654,6 +649,7 @@ These rules are ESLint rule extensions provided by typescript-eslint, so they wi
   "argsIgnorePattern": "^_",
   "caughtErrorsIgnorePattern": "^_",
   "destructuredArrayIgnorePattern": "^_",
+  "reportUsedIgnorePattern": true,
   "varsIgnorePattern": "^_"
 }
 ```

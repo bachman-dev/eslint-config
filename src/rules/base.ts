@@ -81,10 +81,6 @@ const baseRules: RuleMetadata = {
           type: "note",
           text: `See the entry for "@typescript-eslint/no-unused-vars" for TypeScript files.`,
         },
-        {
-          type: "note",
-          text: "When ESLint 9 is supported, this rule will also report any variables with underscores (_) that are used.",
-        },
       ],
     },
     {
