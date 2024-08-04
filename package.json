@@ -46,5 +46,5 @@
   "dependencies": {
     "@typescript-eslint/utils": "^7.9.0"
   },
-  "packageManager": "pnpm@9.4.0"
+  "packageManager": "pnpm@9.6.0"
 }
