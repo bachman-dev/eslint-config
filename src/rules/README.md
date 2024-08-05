@@ -577,8 +577,6 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 
 ### [🛑 @typescript-eslint/no-unnecessary-qualifier](https://typescript-eslint.io/rules/no-unnecessary-qualifier)
 
-### [🛑 @typescript-eslint/no-unsafe-unary-minus](https://typescript-eslint.io/rules/no-unsafe-unary-minus)
-
 ### [🛑 @typescript-eslint/no-useless-empty-export](https://typescript-eslint.io/rules/no-useless-empty-export)
 
 ### [🛑 @typescript-eslint/parameter-properties](https://typescript-eslint.io/rules/parameter-properties)
@@ -594,11 +592,7 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 
 ### [🛑 @typescript-eslint/prefer-enum-initializers](https://typescript-eslint.io/rules/prefer-enum-initializers)
 
-### [🛑 @typescript-eslint/prefer-find](https://typescript-eslint.io/rules/prefer-find)
-
 ### [🛑 @typescript-eslint/prefer-readonly](https://typescript-eslint.io/rules/prefer-readonly)
-
-### [🛑 @typescript-eslint/prefer-regexp-exec](https://typescript-eslint.io/rules/prefer-regexp-exec)
 
 ### [🛑 @typescript-eslint/promise-function-async](https://typescript-eslint.io/rules/promise-function-async)
 
