@@ -16,7 +16,7 @@ In terms of using this config as-is, unless you're contributing code that's unde
 Install the following packages:
 
 ```shell
-pnpm add --save-dev typescript eslint typescript-eslint eslint-config-prettier @bachman-dev/eslint-config
+pnpm add --save-dev typescript eslint @eslint/js typescript-eslint eslint-config-prettier @bachman-dev/eslint-config
 ```
 
 Add the following to your `eslint.config.js`:
@@ -29,7 +29,7 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    // Replace output folder if needed, e.g. "build"
+    // Replace output folder if needed, e.g. "dist"
     ignores: ["dist/**"],
   },
   eslint.configs.recommended,
@@ -39,8 +39,7 @@ export default tseslint.config(
   {
     languageOptions: {
       parserOptions: {
-        // Non-emitting tsconfig extended from tsconfig.json, including "src" folder, config files, tests, etc.
-        project: "tsconfig.eslint.json",
+        projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -62,7 +61,7 @@ export default tseslint.config(
 Install the following packages:
 
 ```shell
-pnpm add --save-dev eslint eslint-config-prettier @bachman-dev/eslint-config
+pnpm add --save-dev eslint @eslint/js eslint-config-prettier @bachman-dev/eslint-config
 ```
 
 ```javascript
@@ -72,7 +71,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 
 export default [
   {
-    // Replace output folder if needed, e.g. "build"
+    // Replace output folder if needed, e.g. "dist"
     ignores: ["dist/**"],
   },
   eslint.configs.recommended,
