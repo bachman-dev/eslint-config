@@ -15,13 +15,11 @@
     // Modules
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "rootDir": "./src",
 
     // Emit
     "declaration": true,
     "declarationMap": true,
     "inlineSources": false,
-    "outDir": "./dist",
 
     // Interop Constraints
     "esModuleInterop": true,
@@ -38,6 +36,6 @@
     // Completeness
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts", "eslint.config.js"],
+  "include": ["src/**/*.ts", "scripts/**/*.ts", "eslint.config.js"],
   "exclude": ["node_modules"]
 }

@@ -49,6 +49,7 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
   "argsIgnorePattern": "^_",
   "caughtErrorsIgnorePattern": "^_",
   "destructuredArrayIgnorePattern": "^_",
+  "reportUsedIgnorePattern": true,
   "varsIgnorePattern": "^_"
 }
 ```
@@ -58,9 +59,6 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 > [!NOTE]
 > See the entry for "@typescript-eslint/no-unused-vars" for TypeScript files.
-
-> [!NOTE]
-> When ESLint 9 is supported, this rule will also report any variables with underscores (\_) that are used.
 
 ### [🛑 no-use-before-define](https://eslint.org/docs/latest/rules/no-use-before-define)
 
@@ -73,10 +71,7 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 > [!NOTE]
 > See the entry for "@typescript-eslint/no-use-before-define" for TypeScript files.
 
-### [🔲 no-useless-assignment](https://eslint.org/docs/latest/rules/no-useless-assignment)
-
-> [!NOTE]
-> This rule is currently disabled; it will be enabled once ESLint 9 is supported.
+### [🛑 no-useless-assignment](https://eslint.org/docs/latest/rules/no-useless-assignment)
 
 ### [🛑 require-atomic-updates](https://eslint.org/docs/latest/rules/require-atomic-updates)
 
@@ -201,14 +196,6 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 > [!NOTE]
 > See the entry for "@typescript-eslint/max-params" for TypeScript files.
-
-### [🛑 multiline-comment-style](https://eslint.org/docs/latest/rules/multiline-comment-style)
-
-#### Settings
-
-```json
-"bare-block"
-```
 
 ### [🛑 new-cap](https://eslint.org/docs/latest/rules/new-cap)
 
@@ -500,8 +487,6 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 ### [🛑 yoda](https://eslint.org/docs/latest/rules/yoda)
 
-### [🛑 line-comment-position](https://eslint.org/docs/latest/rules/line-comment-position)
-
 ### [🛑 unicode-bom](https://eslint.org/docs/latest/rules/unicode-bom)
 
 ## Handled by TypeScript
@@ -592,8 +577,6 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 
 ### [🛑 @typescript-eslint/no-unnecessary-qualifier](https://typescript-eslint.io/rules/no-unnecessary-qualifier)
 
-### [🛑 @typescript-eslint/no-unsafe-unary-minus](https://typescript-eslint.io/rules/no-unsafe-unary-minus)
-
 ### [🛑 @typescript-eslint/no-useless-empty-export](https://typescript-eslint.io/rules/no-useless-empty-export)
 
 ### [🛑 @typescript-eslint/parameter-properties](https://typescript-eslint.io/rules/parameter-properties)
@@ -609,11 +592,7 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 
 ### [🛑 @typescript-eslint/prefer-enum-initializers](https://typescript-eslint.io/rules/prefer-enum-initializers)
 
-### [🛑 @typescript-eslint/prefer-find](https://typescript-eslint.io/rules/prefer-find)
-
 ### [🛑 @typescript-eslint/prefer-readonly](https://typescript-eslint.io/rules/prefer-readonly)
-
-### [🛑 @typescript-eslint/prefer-regexp-exec](https://typescript-eslint.io/rules/prefer-regexp-exec)
 
 ### [🛑 @typescript-eslint/promise-function-async](https://typescript-eslint.io/rules/promise-function-async)
 
@@ -664,6 +643,7 @@ These rules are ESLint rule extensions provided by typescript-eslint, so they wi
   "argsIgnorePattern": "^_",
   "caughtErrorsIgnorePattern": "^_",
   "destructuredArrayIgnorePattern": "^_",
+  "reportUsedIgnorePattern": true,
   "varsIgnorePattern": "^_"
 }
 ```

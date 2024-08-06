@@ -81,10 +81,6 @@ const baseRules: RuleMetadata = {
           type: "note",
           text: `See the entry for "@typescript-eslint/no-unused-vars" for TypeScript files.`,
         },
-        {
-          type: "note",
-          text: "When ESLint 9 is supported, this rule will also report any variables with underscores (_) that are used.",
-        },
       ],
     },
     {
@@ -103,14 +99,7 @@ const baseRules: RuleMetadata = {
     {
       name: "no-useless-assignment",
       url: "https://eslint.org/docs/latest/rules/no-useless-assignment",
-      //TODO: ESLint 9.0 Support
-      severity: "off",
-      admonishments: [
-        {
-          type: "note",
-          text: "This rule is currently disabled; it will be enabled once ESLint 9 is supported.",
-        },
-      ],
+      severity: "error",
     },
     {
       name: "require-atomic-updates",
@@ -306,12 +295,6 @@ const baseRules: RuleMetadata = {
           text: `See the entry for "@typescript-eslint/max-params" for TypeScript files.`,
         },
       ],
-    },
-    {
-      name: "multiline-comment-style",
-      url: "https://eslint.org/docs/latest/rules/multiline-comment-style",
-      severity: "error",
-      settings: "bare-block",
     },
     {
       name: "new-cap",
@@ -840,11 +823,6 @@ const baseRules: RuleMetadata = {
     },
 
     // Formatting
-    {
-      name: "line-comment-position",
-      url: "https://eslint.org/docs/latest/rules/line-comment-position",
-      severity: "error",
-    },
     {
       name: "unicode-bom",
       url: "https://eslint.org/docs/latest/rules/unicode-bom",

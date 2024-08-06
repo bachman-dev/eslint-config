@@ -90,11 +90,6 @@ const typescript: RuleMetadata = {
       severity: "error",
     },
     {
-      name: "@typescript-eslint/no-unsafe-unary-minus",
-      url: "https://typescript-eslint.io/rules/no-unsafe-unary-minus",
-      severity: "error",
-    },
-    {
       name: "@typescript-eslint/no-useless-empty-export",
       url: "https://typescript-eslint.io/rules/no-useless-empty-export",
       severity: "error",
@@ -120,18 +115,8 @@ const typescript: RuleMetadata = {
       severity: "error",
     },
     {
-      name: "@typescript-eslint/prefer-find",
-      url: "https://typescript-eslint.io/rules/prefer-find",
-      severity: "error",
-    },
-    {
       name: "@typescript-eslint/prefer-readonly",
       url: "https://typescript-eslint.io/rules/prefer-readonly",
-      severity: "error",
-    },
-    {
-      name: "@typescript-eslint/prefer-regexp-exec",
-      url: "https://typescript-eslint.io/rules/prefer-regexp-exec",
       severity: "error",
     },
     {
