@@ -157,6 +157,7 @@ const typescript: RuleMetadata = {
       severity: "error",
       settings: {
         allowDefaultCaseForExhaustiveSwitch: true,
+        considerDefaultExhaustiveForUnions: true,
         requireDefaultForNonUnion: true,
       },
     },
