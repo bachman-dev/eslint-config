@@ -2,6 +2,7 @@ changelog:
   exclude:
     labels:
       - "release"
+      - "dependencies"
   categories:
     - title: ⚠️ BREAKING CHANGES
       labels:
@@ -21,9 +22,6 @@ changelog:
     - title: ☑️ TypeScript Changes
       labels:
         - typescript
-    - title: 🔄 Dependency Updates
-      labels:
-        - dependencies
     - title: Other Changes
       labels:
         - "*"
