@@ -618,7 +618,11 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 #### Settings
 
 ```json
-{ "allowDefaultCaseForExhaustiveSwitch": true, "requireDefaultForNonUnion": true }
+{
+  "allowDefaultCaseForExhaustiveSwitch": true,
+  "considerDefaultExhaustiveForUnions": true,
+  "requireDefaultForNonUnion": true
+}
 ```
 
 ## ESLint Extensions by typescript-eslint
