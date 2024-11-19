@@ -187,6 +187,14 @@ const namingConvention = [
     format: ["camelCase", "UPPER_CASE"],
   },
   {
+    // Constants can also be uppercase
+    selector: ["variable"],
+    modifiers: ["const"],
+    leadingUnderscore: "forbid",
+    trailingUnderscore: "forbid",
+    format: ["camelCase", "UPPER_CASE"],
+  },
+  {
     // Relaxed for imports
     selector: "import",
     leadingUnderscore: "forbid",
