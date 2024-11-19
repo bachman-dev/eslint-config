@@ -605,7 +605,7 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 #### Settings
 
 ```json
-{ "allowNumber": true, "allowBoolean": true }
+{ "allow": [{ "name": ["Error", "URL", "URLSearchParams"], "from": "lib" }], "allowNumber": true, "allowBoolean": true }
 ```
 
 > [!NOTE]
