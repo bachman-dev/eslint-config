@@ -90,6 +90,11 @@ const typescript: RuleMetadata = {
       severity: "error",
     },
     {
+      name: "@typescript-eslint/no-unsafe-type-assertion",
+      url: "https://typescript-eslint.io/rules/no-unsafe-type-assertion",
+      severity: "error",
+    },
+    {
       name: "@typescript-eslint/no-useless-empty-export",
       url: "https://typescript-eslint.io/rules/no-useless-empty-export",
       severity: "error",
