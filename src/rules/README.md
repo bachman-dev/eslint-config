@@ -577,6 +577,8 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 
 ### [🛑 @typescript-eslint/no-unnecessary-qualifier](https://typescript-eslint.io/rules/no-unnecessary-qualifier)
 
+### [🛑 @typescript-eslint/no-unsafe-type-assertion](https://typescript-eslint.io/rules/no-unsafe-type-assertion)
+
 ### [🛑 @typescript-eslint/no-useless-empty-export](https://typescript-eslint.io/rules/no-useless-empty-export)
 
 ### [🛑 @typescript-eslint/parameter-properties](https://typescript-eslint.io/rules/parameter-properties)
