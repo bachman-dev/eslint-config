@@ -164,7 +164,8 @@ const namingConvention = [
     leadingUnderscore: "forbid",
     trailingUnderscore: "forbid",
     prefix: anyIndicativePrefixes,
-    format: ["camelCase", "UPPER_CASE"],
+    // Prefix is trimmed when checking, so remainder should end up as PascalCase or UPPER_CASE
+    format: ["PascalCase", "UPPER_CASE"],
   },
   {
     // Unused boolean constants need an underscore at the beginning
