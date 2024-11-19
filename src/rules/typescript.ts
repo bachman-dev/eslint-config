@@ -138,7 +138,11 @@ const typescript: RuleMetadata = {
       name: "@typescript-eslint/restrict-template-expressions",
       url: "https://typescript-eslint.io/rules/restrict-template-expressions",
       severity: "error",
-      settings: { allowNumber: true, allowBoolean: true },
+      settings: {
+        allow: [{ name: ["Error", "URL", "URLSearchParams"], from: "lib" }],
+        allowNumber: true,
+        allowBoolean: true,
+      },
       admonishments: [
         {
           type: "note",
