@@ -15,8 +15,7 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     }
   },
   "files": [
@@ -30,12 +29,11 @@
     "lint:fix": "tsup --dts --format esm src/index.ts && eslint --fix . && prettier --write ."
   },
   "peerDependencies": {
-    "eslint": "^9.8.0",
+    "eslint": "^9.15.0",
     "typescript-eslint": "^8.15.0"
   },
   "devDependencies": {
     "@eslint/js": "9.15.0",
-    "@types/eslint__js": "8.42.3",
     "@types/node": "22.9.0",
     "eslint-config-prettier": "9.1.0",
     "prettier": "3.3.3",
@@ -45,7 +43,7 @@
     "typescript-eslint": "8.15.0"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^8.0.1"
+    "@typescript-eslint/utils": "^8.15.0"
   },
   "packageManager": "pnpm@9.13.2"
 }
