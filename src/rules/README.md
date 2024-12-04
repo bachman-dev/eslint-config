@@ -674,6 +674,12 @@ These rules are ESLint rule extensions provided by typescript-eslint, so they wi
 
 ### [🛑 @typescript-eslint/class-methods-use-this](https://typescript-eslint.io/rules/class-methods-use-this)
 
+#### Settings
+
+```json
+{ "ignoreClassesThatImplementAnInterface": "public-fields" }
+```
+
 ### [🛑 @typescript-eslint/default-param-last](https://typescript-eslint.io/rules/default-param-last)
 
 ### [🛑 @typescript-eslint/init-declarations](https://typescript-eslint.io/rules/init-declarations)
