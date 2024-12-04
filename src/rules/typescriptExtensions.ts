@@ -48,6 +48,7 @@ const typescriptExtensions: RuleMetadata = {
       name: "@typescript-eslint/class-methods-use-this",
       url: "https://typescript-eslint.io/rules/class-methods-use-this",
       severity: "error",
+      settings: { ignoreClassesThatImplementAnInterface: "public-fields" },
     },
     {
       name: "@typescript-eslint/default-param-last",
