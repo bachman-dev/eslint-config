@@ -32,9 +32,9 @@ const uppercaseIndicativePrefixes = [
   "WERE_",
 ] as const;
 
-const anyIndicativePrefixes = [...lowercaseIndicativePrefixes, ...uppercaseIndicativePrefixes];
+export const upperAndLowercaseIndicativePrefixes = [...lowercaseIndicativePrefixes, ...uppercaseIndicativePrefixes];
 
-const namingConvention = [
+export const baseNamingConvention = [
   {
     // Any readonly boolean class/parameter properties should start with an indicative word for truth/falsehood
     selector: ["classProperty", "parameterProperty"],
@@ -42,7 +42,7 @@ const namingConvention = [
     modifiers: ["readonly"],
     leadingUnderscore: "forbid",
     trailingUnderscore: "forbid",
-    prefix: anyIndicativePrefixes,
+    prefix: upperAndLowercaseIndicativePrefixes,
     // Prefix is trimmed when checking, so remainder should end up as PascalCase or UPPER_CASE
     format: ["PascalCase", "UPPER_CASE"],
   },
@@ -53,7 +53,7 @@ const namingConvention = [
     modifiers: ["readonly", "private"],
     leadingUnderscore: "require",
     trailingUnderscore: "forbid",
-    prefix: anyIndicativePrefixes,
+    prefix: upperAndLowercaseIndicativePrefixes,
     // Prefix is trimmed when checking, so remainder should end up as PascalCase or UPPER_CASE
     format: ["PascalCase", "UPPER_CASE"],
   },
@@ -157,13 +157,31 @@ const namingConvention = [
     format: ["camelCase", "PascalCase"],
   },
   {
+    // Relaxed for imports
+    selector: "import",
+    leadingUnderscore: "forbid",
+    trailingUnderscore: "forbid",
+    format: ["camelCase", "snake_case", "PascalCase", "UPPER_CASE"],
+  },
+  {
+    // A good catch-all for everything else
+    selector: "default",
+    leadingUnderscore: "forbid",
+    trailingUnderscore: "forbid",
+    format: ["camelCase"],
+  },
+];
+
+const defaultNamingConvention = [
+  ...baseNamingConvention,
+  {
     // Allow boolean constants to be uppercase
     selector: ["variable"],
     modifiers: ["const"],
     types: ["boolean"],
     leadingUnderscore: "forbid",
     trailingUnderscore: "forbid",
-    prefix: anyIndicativePrefixes,
+    prefix: upperAndLowercaseIndicativePrefixes,
     // Prefix is trimmed when checking, so remainder should end up as PascalCase or UPPER_CASE
     format: ["PascalCase", "UPPER_CASE"],
   },
@@ -174,7 +192,7 @@ const namingConvention = [
     types: ["boolean"],
     leadingUnderscore: "require",
     trailingUnderscore: "forbid",
-    prefix: anyIndicativePrefixes,
+    prefix: upperAndLowercaseIndicativePrefixes,
     // Prefix is trimmed when checking, so remainder should end up as PascalCase or UPPER_CASE
     format: ["PascalCase", "UPPER_CASE"],
   },
@@ -194,20 +212,6 @@ const namingConvention = [
     trailingUnderscore: "forbid",
     format: ["camelCase", "UPPER_CASE"],
   },
-  {
-    // Relaxed for imports
-    selector: "import",
-    leadingUnderscore: "forbid",
-    trailingUnderscore: "forbid",
-    format: ["camelCase", "snake_case", "PascalCase", "UPPER_CASE"],
-  },
-  {
-    // A good catch-all for everything else
-    selector: "default",
-    leadingUnderscore: "forbid",
-    trailingUnderscore: "forbid",
-    format: ["camelCase"],
-  },
 ];
 
-export default namingConvention;
+export default defaultNamingConvention;

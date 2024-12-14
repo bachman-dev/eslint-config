@@ -9,6 +9,7 @@ export interface ConfigOptions {
   language: "javascript-in-typescript" | "javascript" | "typescript";
   allowBitwise?: boolean;
   allowConsole?: boolean;
+  namingConvention?: "allow-pascal-case-constants" | "default";
   requireParameterProperties?: boolean;
 }
 

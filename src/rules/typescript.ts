@@ -1,6 +1,7 @@
 import type { RuleMetadata } from "../types.js";
+import allowPascalCaseConstants from "../settings/naming-conventions/allowPascalCaseConstants.js";
+import defaultNamingConvention from "../settings/naming-conventions/default.js";
 import memberOrdering from "../settings/memberOrdering.js";
-import namingConvention from "../settings/namingConvention.js";
 
 const typescript: RuleMetadata = {
   name: "TypeScript Rules",
@@ -66,11 +67,26 @@ const typescript: RuleMetadata = {
       name: "@typescript-eslint/naming-convention",
       url: "https://typescript-eslint.io/rules/naming-convention",
       severity: "error",
-      settings: namingConvention,
+      filteredWhen: (options) =>
+        typeof options.namingConvention !== "undefined" && options.namingConvention !== "default",
+      settings: defaultNamingConvention,
       admonishments: [
         {
           type: "tip",
-          text: "See [namingConvention.ts](/src/settings/namingConvention.ts) for the exact naming convention.",
+          text: "This is the default naming convention, used when `namingConvention` is not provided or set to `default`. See [default.ts](/src/settings/naming-conventions/default.ts) for the exact naming convention.",
+        },
+      ],
+    },
+    {
+      name: "@typescript-eslint/naming-convention",
+      url: "https://typescript-eslint.io/rules/naming-convention",
+      severity: "error",
+      filteredWhen: (options) => options.namingConvention !== "allow-pascal-case-constants",
+      settings: allowPascalCaseConstants,
+      admonishments: [
+        {
+          type: "tip",
+          text: "This naming convention allows for PascalCase constants, particularly for defining schema types alongside TypeScript types for runtime validation; set `namingConvention` in the options to `allow-pascal-case-constants` to use it. See [allowPascalCaseConstants.ts](/src/settings/naming-conventions/allowPascalCaseConstants.ts) for the exact naming convention.",
         },
       ],
     },
