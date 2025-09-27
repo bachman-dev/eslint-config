@@ -364,6 +364,8 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 > [!NOTE]
 > For TypeScript code, typescript-eslint's "strictTypeChecked" configuration covers this issue with its "only-throw-error" rule.
 
+### [🛑 no-unassigned-vars](https://eslint.org/docs/latest/rules/no-unassigned-vars)
+
 ### [🛑 no-undef-init](https://eslint.org/docs/latest/rules/no-undef-init)
 
 ### [🛑 no-undefined](https://eslint.org/docs/latest/rules/no-undefined)
@@ -469,6 +471,14 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 ### [🛑 prefer-spread](https://eslint.org/docs/latest/rules/prefer-spread)
 
 ### [🛑 prefer-template](https://eslint.org/docs/latest/rules/prefer-template)
+
+### [🛑 preserve-caught-error](https://eslint.org/docs/latest/rules/preserve-caught-error)
+
+#### Settings
+
+```json
+{ "requireCatchParameter": true }
+```
 
 ### [🛑 radix](https://eslint.org/docs/latest/rules/radix)
 
