@@ -46,12 +46,7 @@ enum Heading {
 }
 
 function header(level: Heading, text: string): string {
-  let headerString = "";
-  for (let idx = Heading.One; idx <= level; idx++) {
-    headerString += "#";
-  }
-  headerString += ` ${text}\n\n`;
-  return headerString;
+  return `${"#".repeat(level)} ${text}\n\n`;
 }
 
 function json(item: unknown): string {
