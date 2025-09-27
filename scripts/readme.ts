@@ -11,28 +11,26 @@ import { writeFile } from "fs/promises";
 
 function admonish(admonishments: Admonishment[] | undefined): string {
   let admonishmentString = "";
-  if (Array.isArray(admonishments) && admonishments.length > 0) {
-    admonishments.forEach((admonishment) => {
-      admonishmentString += "> [!";
-      switch (admonishment.type) {
-        case "caution":
-          admonishmentString += "CAUTION";
-          break;
-        case "important":
-          admonishmentString += "IMPORTANT";
-          break;
-        case "note":
-          admonishmentString += "NOTE";
-          break;
-        case "tip":
-          admonishmentString += "TIP";
-          break;
-        case "warning":
-          admonishmentString += "WARNING";
-      }
-      admonishmentString += `]\n> ${admonishment.text}\n\n`;
-    });
-  }
+  admonishments?.forEach((admonishment) => {
+    admonishmentString += "> [!";
+    switch (admonishment.type) {
+      case "caution":
+        admonishmentString += "CAUTION";
+        break;
+      case "important":
+        admonishmentString += "IMPORTANT";
+        break;
+      case "note":
+        admonishmentString += "NOTE";
+        break;
+      case "tip":
+        admonishmentString += "TIP";
+        break;
+      case "warning":
+        admonishmentString += "WARNING";
+    }
+    admonishmentString += `]\n> ${admonishment.text}\n\n`;
+  });
   return admonishmentString;
 }
 
