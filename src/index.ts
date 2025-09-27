@@ -6,13 +6,14 @@ import {
   typescript,
   typescriptExtensions,
 } from "./rules/index.js";
-import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
+import type { Linter } from "eslint";
 
-export default function bachmanDev(options: ConfigOptions): FlatConfig.Config {
-  const flatConfig: FlatConfig.Config = {
+export default function bachmanDev(options: ConfigOptions): Linter.Config {
+  const flatConfig: Linter.Config = {
     name: `@bachman-dev/eslint-config/${options.language}`,
     linterOptions: {
       reportUnusedDisableDirectives: "error",
+      reportUnusedInlineConfigs: "error",
     },
   };
   switch (options.language) {

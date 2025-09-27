@@ -1,4 +1,4 @@
-import type { SharedConfig } from "@typescript-eslint/utils/ts-eslint";
+import type { Linter } from "eslint";
 
 export interface Admonishment {
   text: string;
@@ -22,22 +22,22 @@ export interface RuleMetadata {
 
 export interface Rule {
   name: string;
-  severity: SharedConfig.SeverityString;
+  severity: Linter.StringSeverity;
   url: string;
   admonishments?: [Admonishment, ...Admonishment[]];
   filteredWhen?: (options: ConfigOptions) => boolean;
   settings?: unknown[] | object | string;
 }
 
-export function toRulesRecord(options: ConfigOptions, ...groups: RuleMetadata[]): SharedConfig.RulesRecord {
-  const rules: SharedConfig.RulesRecord = {};
+export function toRulesRecord(options: ConfigOptions, ...groups: RuleMetadata[]): Linter.RulesRecord {
+  const rules: Linter.RulesRecord = {};
   groups.forEach((group) => {
     const filteredRules = group.rules.filter((rule) => rule.filteredWhen?.(options) !== true);
     filteredRules.forEach((rule) => {
       if (typeof rule.settings === "undefined") {
         rules[rule.name] = rule.severity;
       } else {
-        const ruleLevelAndOptions: SharedConfig.RuleLevelAndOptions = [rule.severity];
+        const ruleLevelAndOptions: Linter.RuleSeverityAndOptions = [rule.severity];
         if (Array.isArray(rule.settings)) {
           ruleLevelAndOptions.push(...rule.settings);
         } else {
