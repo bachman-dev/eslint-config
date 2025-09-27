@@ -1,6 +1,6 @@
 {
   "name": "@bachman-dev/eslint-config",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "",
   "homepage": "https://github.com/bachman-dev/eslint-config",
   "author": "Collin Bachman <collin.r68zdn9d@bachman.dev>",
@@ -22,28 +22,28 @@
     "dist/**/*.{js,d.ts}"
   ],
   "scripts": {
-    "build": "tsup --dts --format esm src/index.ts",
+    "build": "tsdown --dts --format esm src/index.ts",
     "build:docs": "tsx ./scripts/readme.ts && prettier --write ./src/rules/README.md",
-    "lint": "tsup --dts --format esm src/index.ts && eslint . && prettier --check .",
+    "lint": "tsdown --dts --format esm src/index.ts && eslint . && prettier --check .",
     "lint:ci": "eslint --fix . && prettier --write .",
-    "lint:fix": "tsup --dts --format esm src/index.ts && eslint --fix . && prettier --write ."
+    "lint:fix": "tsdown --dts --format esm src/index.ts && eslint --fix . && prettier --write ."
   },
   "peerDependencies": {
-    "eslint": "^9.15.0",
-    "typescript-eslint": "^8.15.0"
+    "eslint": "^9.36.0",
+    "typescript-eslint": "^8.44.0"
   },
   "devDependencies": {
-    "@eslint/js": "9.34.0",
+    "@eslint/js": "9.36.0",
     "@types/node": "22.18.1",
     "eslint-config-prettier": "10.1.8",
     "prettier": "3.6.2",
-    "tsup": "8.5.0",
+    "tsdown": "0.15.5",
     "tsx": "4.20.5",
     "typescript": "5.6.3",
-    "typescript-eslint": "8.42.0"
+    "typescript-eslint": "8.44.1"
   },
   "dependencies": {
-    "@typescript-eslint/utils": "^8.15.0"
+    "@typescript-eslint/utils": "^8.44.0"
   },
-  "packageManager": "pnpm@10.15.1"
+  "packageManager": "pnpm@10.17.1+sha512.17c560fca4867ae9473a3899ad84a88334914f379be46d455cbf92e5cf4b39d34985d452d2583baf19967fa76cb5c17bc9e245529d0b98745721aa7200ecaf7a"
 }
