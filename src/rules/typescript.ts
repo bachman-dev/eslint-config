@@ -1,7 +1,8 @@
 import type { RuleMetadata } from "../types.js";
-import allowPascalCaseConstants from "../settings/naming-conventions/allowPascalCaseConstants.js";
+import allowPascalCaseConstants from "../settings/naming-conventions/allow-pascal-case-constants.js";
 import defaultNamingConvention from "../settings/naming-conventions/default.js";
-import memberOrdering from "../settings/memberOrdering.js";
+import memberOrdering from "../settings/member-ordering.js";
+import { namingConventionSort } from "../util.js";
 
 const typescript: RuleMetadata = {
   name: "TypeScript Rules",
@@ -69,7 +70,7 @@ const typescript: RuleMetadata = {
       severity: "error",
       filteredWhen: (options) =>
         typeof options.namingConvention !== "undefined" && options.namingConvention !== "default",
-      settings: defaultNamingConvention,
+      settings: defaultNamingConvention.sort(namingConventionSort),
       admonishments: [
         {
           type: "tip",
@@ -82,7 +83,7 @@ const typescript: RuleMetadata = {
       url: "https://typescript-eslint.io/rules/naming-convention",
       severity: "error",
       filteredWhen: (options) => options.namingConvention !== "allow-pascal-case-constants",
-      settings: allowPascalCaseConstants,
+      settings: allowPascalCaseConstants.sort(namingConventionSort),
       admonishments: [
         {
           type: "tip",

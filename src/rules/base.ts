@@ -8,7 +8,7 @@ import {
   jsPreferDestructuring,
 } from "../settings/shared.js";
 import type { RuleMetadata } from "../types.js";
-import noRestrictedSyntax from "../settings/noRestrictedSyntax.js";
+import noRestrictedSyntax from "../settings/no-restricted-syntax.js";
 
 const baseRules: RuleMetadata = {
   name: "Base (JS/TS) Rules",
