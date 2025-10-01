@@ -1,4 +1,3 @@
-import { type ConfigOptions, toRulesRecord } from "./types.js";
 import {
   baseRules,
   handledByTypescript,
@@ -6,7 +5,9 @@ import {
   typescript,
   typescriptExtensions,
 } from "./rules/index.js";
+import type { ConfigOptions } from "./types.js";
 import type { Linter } from "eslint";
+import { toRulesRecord } from "./util.js";
 
 export default function bachmanDev(options: ConfigOptions): Linter.Config {
   const flatConfig: Linter.Config = {
