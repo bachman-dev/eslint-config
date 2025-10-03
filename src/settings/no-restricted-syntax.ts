@@ -24,8 +24,12 @@ const noRestrictedSyntax = [
               Use a const object using the "as const" indicator instead.`,
   },
   {
-    selector: "TSTupleType > :not(TSNamedTupleMember)",
-    message: "All tuples should have labels to indicate what their members are for.",
+    selector: "TSTupleType > :not(TSNamedTupleMember, TSRestType)",
+    message: "All tuple members should have labels to indicate what they are for, using 'label: Type'",
+  },
+  {
+    selector: "TSTupleType > TSRestType:not(:has(TSNamedTupleMember))",
+    message: "Rest tuple members should have labels to indicate what they are for, using '...rest: Type[]'",
   },
 ];
 
