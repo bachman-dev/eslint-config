@@ -1,4 +1,5 @@
 import bachmanDev from "./dist/index.js";
+import { defineConfig } from "eslint/config";
 import eslint from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import tseslint from "typescript-eslint";
@@ -9,7 +10,7 @@ import tseslint from "typescript-eslint";
 
 // @ts-check
 
-export default tseslint.config(
+export default defineConfig(
   {
     ignores: ["dist/**"],
   },
