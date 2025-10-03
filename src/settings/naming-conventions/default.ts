@@ -6,6 +6,7 @@ const lowercaseIndicativePrefixes = [
   "could",
   "did",
   "does",
+  "had",
   "has",
   "have",
   "is",
@@ -23,6 +24,7 @@ const uppercaseIndicativePrefixes = [
   "COULD_",
   "DID_",
   "DOES_",
+  "HAD_",
   "HAS_",
   "HAVE",
   "IS_",
@@ -333,7 +335,7 @@ export const baseNamingConvention: NamingConvention[] = [
   },
 ];
 
-const defaultConstCases: NamingConvention[] = [
+export const defaultConstCases: NamingConvention[] = [
   {
     // Unused boolean constants need an underscore at the beginning
     selector: "variable",

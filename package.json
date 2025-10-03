@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "build": "tsdown --dts --format esm src/index.ts",
-    "build:docs": "tsx ./scripts/readme.ts && prettier --write ./src/rules/README.md",
+    "build:docs": "tsx ./scripts/docs.ts && prettier --write ./src/rules/README.md ./src/rules/naming-conventions.md",
     "lint": "tsdown --dts --format esm src/index.ts && eslint . && prettier --check .",
     "lint:ci": "eslint --fix . && prettier --write .",
     "lint:fix": "tsdown --dts --format esm src/index.ts && eslint --fix . && prettier --write ."

@@ -7,6 +7,7 @@ const pascalCaseIndicativePrefixes = [
   "Could",
   "Did",
   "Does",
+  "Had",
   "Has",
   "Have",
   "Is",
@@ -18,7 +19,7 @@ const pascalCaseIndicativePrefixes = [
   "Were",
 ];
 
-const pascalCaseConstants: NamingConvention[] = [
+export const pascalCaseConstants: NamingConvention[] = [
   {
     // Unused boolean constants need an underscore at the beginning
     selector: "variable",
