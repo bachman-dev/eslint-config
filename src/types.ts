@@ -10,7 +10,6 @@ export interface ConfigOptions {
   allowBitwise?: boolean;
   allowConsole?: boolean;
   namingConvention?: "allow-pascal-case-constants" | "default";
-  requireParameterProperties?: boolean;
 }
 
 export type NamingConventionSelector =

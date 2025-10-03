@@ -120,15 +120,8 @@ const typescript: RuleMetadata = {
       url: "https://typescript-eslint.io/rules/parameter-properties",
       severity: "error",
       settings: {
-        prefer: "parameter-property",
+        prefer: "class-property",
       },
-      filteredWhen: (options) => options.requireParameterProperties === false,
-      admonishments: [
-        {
-          type: "tip",
-          text: `Older projects may need some work to adhere to this rule; you can set "requireParameterProperties" to "false," but updating the code to adhere to this rule should be done sooner than later.`,
-        },
-      ],
     },
     {
       name: "@typescript-eslint/prefer-enum-initializers",

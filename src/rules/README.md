@@ -605,11 +605,8 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 #### Settings
 
 ```json
-{ "prefer": "parameter-property" }
+{ "prefer": "class-property" }
 ```
-
-> [!TIP]
-> Older projects may need some work to adhere to this rule; you can set "requireParameterProperties" to "false," but updating the code to adhere to this rule should be done sooner than later.
 
 ### [🛑 @typescript-eslint/prefer-enum-initializers](https://typescript-eslint.io/rules/prefer-enum-initializers)
 
