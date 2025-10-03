@@ -14,8 +14,9 @@ const noRestrictedSyntax = [
               If this is intentional on an item that is not an array, disable for this line.`,
   },
   {
-    selector: "TSEnumDeclaration[const=true]",
-    message: "Don't use const enums; they don't work well with common TypeScript configurations.",
+    selector: "TSEnumDeclaration",
+    message: `Don't use enums; they aren't erasable in applications, and have mixed behavior depending on their values.
+              Use a const object using the "as const" indicator instead.`,
   },
 ];
 
