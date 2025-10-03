@@ -1,7 +1,7 @@
 const noRestrictedSyntax = [
   {
-    selector: 'PropertyDefinition[key.type="PrivateIdentifier"]',
-    message: `Avoid using #private properties/methods; they don't always behave well, e.g. when proxying a class.
+    selector: ":matches(PropertyDefinition, MethodDefinition) > PrivateIdentifier.key",
+    message: `Avoid using #private elements; they don't always behave well, e.g. when proxying a class.
               Make their access "private", or if this is intentional for security reasons, disable for this line.`,
   },
   {
