@@ -14,6 +14,11 @@ const noRestrictedSyntax = [
               If this is intentional on an item that is not an array, disable for this line.`,
   },
   {
+    selector: "MemberExpression[object.property.name='constructor'][property.name='name']",
+    message: `'constructor.name' is not reliable after code minifier usage.
+               Consider 'instanceof' or other identifiers instead.`,
+  },
+  {
     selector: "TSEnumDeclaration",
     message: `Don't use enums; they aren't erasable in applications, and have mixed behavior depending on their values.
               Use a const object using the "as const" indicator instead.`,
