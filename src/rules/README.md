@@ -579,7 +579,7 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 (omitted to save space)
 
 > [!TIP]
-> This is the default naming convention, used when `namingConvention` is not provided or set to `default`. See [default.ts](/src/settings/naming-conventions/default.ts) for the exact naming convention.
+> This is the default naming convention, used when `namingConvention` is not provided or set to `default`. See [naming-conventions.md](/src/rules/naming-conventions.md) for the exact naming convention.
 
 ### [🛑 @typescript-eslint/naming-convention](https://typescript-eslint.io/rules/naming-convention)
 
@@ -588,7 +588,7 @@ These rules come from typescript-eslint, and are specifically tailored for linti
 (omitted to save space)
 
 > [!TIP]
-> This naming convention allows for PascalCase constants, particularly for defining schema types alongside TypeScript types for runtime validation; set `namingConvention` in the options to `allow-pascal-case-constants` to use it. See [allow-pascal-case-constants.ts](/src/settings/naming-conventions/allow-pascal-case-constants.ts) for the exact naming convention.
+> This naming convention allows for PascalCase constants, particularly for defining schema types alongside TypeScript types for runtime validation; set `namingConvention` in the options to `allow-pascal-case-constants` to use it. See [naming-conventions.md](/src/rules/naming-conventions.md) for the exact naming convention.
 
 ### [🛑 @typescript-eslint/no-import-type-side-effects](https://typescript-eslint.io/rules/no-import-type-side-effects)
 
