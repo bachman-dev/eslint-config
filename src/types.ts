@@ -203,14 +203,14 @@ export interface RuleMetadata {
   description: string;
   name: string;
   rules: Rule[];
-  admonishments?: [Admonishment, ...Admonishment[]];
+  admonishments?: [first: Admonishment, ...rest: Admonishment[]];
 }
 
 export interface Rule {
   name: string;
   severity: Linter.StringSeverity;
   url: string;
-  admonishments?: [Admonishment, ...Admonishment[]];
+  admonishments?: [first: Admonishment, ...rest: Admonishment[]];
   filteredWhen?: (options: ConfigOptions) => boolean;
   settings?: unknown[] | object | string;
 }
