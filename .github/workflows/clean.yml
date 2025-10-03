@@ -30,7 +30,7 @@ jobs:
         run: pnpm install
       - name: Build Package
         run: pnpm build
-      - name: Build Rules README
+      - name: Build Rules Docs
         run: pnpm build:docs
       - name: Run ESLint
         run: pnpm lint:ci

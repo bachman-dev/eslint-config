@@ -23,11 +23,12 @@ Add the following to your `eslint.config.js`:
 
 ```javascript
 import bachmanDev from "@bachman-dev/eslint-config";
+import { defineConfig } from "eslint/config";
 import eslint from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 import tseslint from "typescript-eslint";
 
-export default tseslint.config(
+export default defineConfig(
   {
     // Replace output folder if needed, e.g. "dist"
     ignores: ["dist/**"],
@@ -66,10 +67,11 @@ pnpm add --save-dev eslint @eslint/js eslint-config-prettier @bachman-dev/eslint
 
 ```javascript
 import bachmanDev from "@bachman-dev/eslint-config";
+import { defineConfig } from "eslint/config";
 import eslint from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";
 
-export default [
+export default defineConfig([
   {
     // Replace output folder if needed, e.g. "dist"
     ignores: ["dist/**"],
@@ -77,7 +79,7 @@ export default [
   eslint.configs.recommended,
   bachmanDev({ language: "javascript" }),
   eslintConfigPrettier,
-];
+]);
 ```
 
 ## Rulesets
@@ -106,13 +108,6 @@ Permits plain calls to `console` methods when set to `true`.
 
 > [!WARNING]
 > Logging via the built-in "console" object can be convenient, but usually leads to excess outputs hanging around; it's best to use a logging framework (or make your own service, disabling this rule in your own methods) so that logging is centralized, configurable, and not (as often) subject to misplaced log-prints that make it into production. Consider this before enabling this config option.
-
-### `requireParameterProperties`
-
-Older TypeScript projects didn't take advantage of [Parameter Properties](https://www.typescriptlang.org/docs/handbook/2/classes.html#parameter-properties), so as a **temporary** means, this option can be set to `false` to soften the blow when it comes to linting errors when enabling this config.
-
-> [!TIP]
-> Updating the code to adhere to this rule should be done sooner than later if this option is set to `false`.
 
 ## Contributing
 

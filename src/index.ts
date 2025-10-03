@@ -1,4 +1,3 @@
-import { type ConfigOptions, toRulesRecord } from "./types.js";
 import {
   baseRules,
   handledByTypescript,
@@ -6,13 +5,16 @@ import {
   typescript,
   typescriptExtensions,
 } from "./rules/index.js";
-import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
+import type { ConfigOptions } from "./types.js";
+import type { Linter } from "eslint";
+import { toRulesRecord } from "./util.js";
 
-export default function bachmanDev(options: ConfigOptions): FlatConfig.Config {
-  const flatConfig: FlatConfig.Config = {
+export default function bachmanDev(options: ConfigOptions): Linter.Config {
+  const flatConfig: Linter.Config = {
     name: `@bachman-dev/eslint-config/${options.language}`,
     linterOptions: {
       reportUnusedDisableDirectives: "error",
+      reportUnusedInlineConfigs: "error",
     },
   };
   switch (options.language) {

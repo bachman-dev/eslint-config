@@ -1,7 +1,7 @@
 import type { RuleMetadata } from "../types.js";
-import allowPascalCaseConstants from "../settings/naming-conventions/allowPascalCaseConstants.js";
+import allowPascalCaseConstants from "../settings/naming-conventions/allow-pascal-case-constants.js";
 import defaultNamingConvention from "../settings/naming-conventions/default.js";
-import memberOrdering from "../settings/memberOrdering.js";
+import memberOrdering from "../settings/member-ordering.js";
 
 const typescript: RuleMetadata = {
   name: "TypeScript Rules",
@@ -73,7 +73,7 @@ const typescript: RuleMetadata = {
       admonishments: [
         {
           type: "tip",
-          text: "This is the default naming convention, used when `namingConvention` is not provided or set to `default`. See [default.ts](/src/settings/naming-conventions/default.ts) for the exact naming convention.",
+          text: "This is the default naming convention, used when `namingConvention` is not provided or set to `default`. See [naming-conventions.md](/src/rules/naming-conventions.md) for the exact naming convention.",
         },
       ],
     },
@@ -86,7 +86,7 @@ const typescript: RuleMetadata = {
       admonishments: [
         {
           type: "tip",
-          text: "This naming convention allows for PascalCase constants, particularly for defining schema types alongside TypeScript types for runtime validation; set `namingConvention` in the options to `allow-pascal-case-constants` to use it. See [allowPascalCaseConstants.ts](/src/settings/naming-conventions/allowPascalCaseConstants.ts) for the exact naming convention.",
+          text: "This naming convention allows for PascalCase constants, particularly for defining schema types alongside TypeScript types for runtime validation; set `namingConvention` in the options to `allow-pascal-case-constants` to use it. See [naming-conventions.md](/src/rules/naming-conventions.md) for the exact naming convention.",
         },
       ],
     },
@@ -120,15 +120,8 @@ const typescript: RuleMetadata = {
       url: "https://typescript-eslint.io/rules/parameter-properties",
       severity: "error",
       settings: {
-        prefer: "parameter-property",
+        prefer: "class-property",
       },
-      filteredWhen: (options) => options.requireParameterProperties === false,
-      admonishments: [
-        {
-          type: "tip",
-          text: `Older projects may need some work to adhere to this rule; you can set "requireParameterProperties" to "false," but updating the code to adhere to this rule should be done sooner than later.`,
-        },
-      ],
     },
     {
       name: "@typescript-eslint/prefer-enum-initializers",

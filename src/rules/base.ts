@@ -8,7 +8,7 @@ import {
   jsPreferDestructuring,
 } from "../settings/shared.js";
 import type { RuleMetadata } from "../types.js";
-import noRestrictedSyntax from "../settings/noRestrictedSyntax.js";
+import noRestrictedSyntax from "../settings/no-restricted-syntax.js";
 
 const baseRules: RuleMetadata = {
   name: "Base (JS/TS) Rules",
@@ -600,6 +600,11 @@ const baseRules: RuleMetadata = {
       ],
     },
     {
+      name: "no-unassigned-vars",
+      url: "https://eslint.org/docs/latest/rules/no-unassigned-vars",
+      severity: "error",
+    },
+    {
       name: "no-undef-init",
       url: "https://eslint.org/docs/latest/rules/no-undef-init",
       severity: "error",
@@ -778,6 +783,12 @@ const baseRules: RuleMetadata = {
       name: "prefer-template",
       url: "https://eslint.org/docs/latest/rules/prefer-template",
       severity: "error",
+    },
+    {
+      name: "preserve-caught-error",
+      url: "https://eslint.org/docs/latest/rules/preserve-caught-error",
+      severity: "error",
+      settings: { requireCatchParameter: true },
     },
     {
       name: "radix",
