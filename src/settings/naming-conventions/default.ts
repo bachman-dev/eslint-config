@@ -16,6 +16,7 @@ const lowercaseIndicativePrefixes = [
   "should",
   "was",
   "were",
+  "will",
 ];
 
 const uppercaseIndicativePrefixes = [
@@ -34,6 +35,7 @@ const uppercaseIndicativePrefixes = [
   "SHOULD_",
   "WAS_",
   "WERE_",
+  "WILL_",
 ];
 
 export const upperAndLowercaseIndicativePrefixes = [...lowercaseIndicativePrefixes, ...uppercaseIndicativePrefixes];
