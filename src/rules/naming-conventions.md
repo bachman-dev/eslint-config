@@ -43,42 +43,42 @@ These rules are applied to both the `default` and `allow-pascal-case-constants` 
 ### Class Properties That Are `#private`, `readonly` And Are Booleans
 
 - **Leading Underscore:** ❌ Forbidden
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_, WILL\_
 - **Format:** camelCase, UPPER_CASE
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Class Properties That Are `#private` And Are Booleans
 
 - **Leading Underscore:** ❌ Forbidden
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will
 - **Format:** camelCase
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Class Properties That Are `private`, `readonly` And Are Booleans
 
 - **Leading Underscore:** \*️⃣ Required (single)
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_, WILL\_
 - **Format:** camelCase, UPPER_CASE
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Class Properties That Are `private` And Are Booleans
 
 - **Leading Underscore:** \*️⃣ Required (single)
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will
 - **Format:** camelCase
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Class Properties That Are `readonly` And Are Booleans
 
 - **Leading Underscore:** ❌ Forbidden
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_, WILL\_
 - **Format:** camelCase, UPPER_CASE
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Class Properties That Are Booleans
 
 - **Leading Underscore:** ❌ Forbidden
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will
 - **Format:** camelCase
 - **Trailing Underscore:** ❌ Forbidden
 
@@ -91,42 +91,42 @@ These rules are applied to both the `default` and `allow-pascal-case-constants` 
 ### Parameter Properties That Are `private`, `readonly` And Are Booleans
 
 - **Leading Underscore:** \*️⃣ Required (single)
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_, WILL\_
 - **Format:** camelCase, UPPER_CASE
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Parameter Properties That Are `private` And Are Booleans
 
 - **Leading Underscore:** \*️⃣ Required (single)
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will
 - **Format:** camelCase
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Parameter Properties That Are `readonly` And Are Booleans
 
 - **Leading Underscore:** ❌ Forbidden
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_, WILL\_
 - **Format:** camelCase, UPPER_CASE
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Parameter Properties That Are Booleans
 
 - **Leading Underscore:** ❌ Forbidden
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will
 - **Format:** camelCase
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Parameters That Are Unused And Are Booleans
 
 - **Leading Underscore:** \*️⃣ Required (single)
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will
 - **Format:** camelCase
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Parameters That Are Booleans
 
 - **Leading Underscore:** ❌ Forbidden
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will
 - **Format:** camelCase
 - **Trailing Underscore:** ❌ Forbidden
 
@@ -145,14 +145,14 @@ These rules are applied to both the `default` and `allow-pascal-case-constants` 
 ### Variables That Are Unused And Are Booleans
 
 - **Leading Underscore:** \*️⃣ Required (single)
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will
 - **Format:** camelCase
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Variables That Are Booleans
 
 - **Leading Underscore:** ❌ Forbidden
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will
 - **Format:** camelCase
 - **Trailing Underscore:** ❌ Forbidden
 
@@ -201,14 +201,14 @@ These rules are applied to both the `default` and `allow-pascal-case-constants` 
 ### Accessors That Are `private` And Are Booleans
 
 - **Leading Underscore:** \*️⃣ Required (single)
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will
 - **Format:** camelCase
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Accessors That Are Booleans
 
 - **Leading Underscore:** ❌ Forbidden
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will
 - **Format:** camelCase
 - **Trailing Underscore:** ❌ Forbidden
 
@@ -225,14 +225,14 @@ In addition to the above base rules, these rules are applied to the `default` na
 ### Variables That Are Constants, Unused And Are Booleans
 
 - **Leading Underscore:** \*️⃣ Required (single)
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_, WILL\_
 - **Format:** camelCase, UPPER_CASE
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Variables That Are Constants And Are Booleans
 
 - **Leading Underscore:** ❌ Forbidden
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_, WILL\_
 - **Format:** camelCase, UPPER_CASE
 - **Trailing Underscore:** ❌ Forbidden
 
@@ -255,14 +255,14 @@ In addition to the above base rules, these rules are applied to the `allow-pasca
 ### Variables That Are Constants, Unused And Are Booleans
 
 - **Leading Underscore:** \*️⃣ Required (single)
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_, Are, Can, Could, Did, Does, Had, Has, Have, Is, May, Might, Shall, Should, Was, Were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_, WILL\_, Are, Can, Could, Did, Does, Had, Has, Have, Is, May, Might, Shall, Should, Was, Were, Will
 - **Format:** PascalCase, UPPER_CASE
 - **Trailing Underscore:** ❌ Forbidden
 
 ### Variables That Are Constants And Are Booleans
 
 - **Leading Underscore:** ❌ Forbidden
-- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_, Are, Can, Could, Did, Does, Had, Has, Have, Is, May, Might, Shall, Should, Was, Were
+- **Requires Indicative Prefix:** are, can, could, did, does, had, has, have, is, may, might, shall, should, was, were, will, ARE\_, CAN\_, COULD\_, DID\_, DOES\_, HAD\_, HAS\_, HAVE, IS\_, MAY\_, MIGHT\_, SHALL\_, SHOULD\_, WAS\_, WERE\_, WILL\_, Are, Can, Could, Did, Does, Had, Has, Have, Is, May, Might, Shall, Should, Was, Were, Will
 - **Format:** PascalCase, UPPER_CASE
 - **Trailing Underscore:** ❌ Forbidden
 

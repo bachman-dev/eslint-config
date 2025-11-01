@@ -17,6 +17,7 @@ const pascalCaseIndicativePrefixes = [
   "Should",
   "Was",
   "Were",
+  "Will",
 ];
 
 export const pascalCaseConstants: NamingConvention[] = [
