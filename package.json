@@ -39,7 +39,7 @@
     "tsdown": "0.15.12",
     "tsx": "4.20.6",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.45.0"
+    "typescript-eslint": "8.46.2"
   },
   "dependencies": {
     "eslint": "^9.36.0"
