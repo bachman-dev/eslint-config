@@ -19,7 +19,7 @@
     }
   },
   "files": [
-    "dist/**/*.{js,d.ts}"
+    "dist/**/*.{mjs,d.mts}"
   ],
   "scripts": {
     "build": "tsdown --dts --format esm src/index.ts",
