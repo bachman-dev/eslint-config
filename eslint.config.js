@@ -1,4 +1,4 @@
-import bachmanDev from "./dist/index.js";
+import bachmanDev from "@bachman-dev/eslint-config";
 import { defineConfig } from "eslint/config";
 import eslint from "@eslint/js";
 import eslintConfigPrettier from "eslint-config-prettier";

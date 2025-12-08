@@ -10,12 +10,12 @@
     "url": "https://github.com/bachman-dev/eslint-config"
   },
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
+      "import": {
+        "default": "./dist/index.mjs",
+        "types": "./dist/index.d.mts"
+      }
     }
   },
   "files": [
@@ -36,7 +36,7 @@
     "@types/node": "24.10.1",
     "eslint-config-prettier": "10.1.8",
     "prettier": "3.7.4",
-    "tsdown": "0.15.12",
+    "tsdown": "0.17.0",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.48.1"
