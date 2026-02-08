@@ -71,8 +71,6 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 > [!NOTE]
 > See the entry for "@typescript-eslint/no-use-before-define" for TypeScript files.
 
-### [🛑 no-useless-assignment](https://eslint.org/docs/latest/rules/no-useless-assignment)
-
 ### [🛑 require-atomic-updates](https://eslint.org/docs/latest/rules/require-atomic-updates)
 
 ### [🛑 accessor-pairs](https://eslint.org/docs/latest/rules/accessor-pairs)
@@ -363,8 +361,6 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 
 > [!NOTE]
 > For TypeScript code, typescript-eslint's "strictTypeChecked" configuration covers this issue with its "only-throw-error" rule.
-
-### [🛑 no-unassigned-vars](https://eslint.org/docs/latest/rules/no-unassigned-vars)
 
 ### [🛑 no-undef-init](https://eslint.org/docs/latest/rules/no-undef-init)
 
