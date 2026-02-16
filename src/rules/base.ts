@@ -97,11 +97,6 @@ const baseRules: RuleMetadata = {
       ],
     },
     {
-      name: "no-useless-assignment",
-      url: "https://eslint.org/docs/latest/rules/no-useless-assignment",
-      severity: "error",
-    },
-    {
       name: "require-atomic-updates",
       url: "https://eslint.org/docs/latest/rules/require-atomic-updates",
       severity: "error",
@@ -598,11 +593,6 @@ const baseRules: RuleMetadata = {
           text: `For TypeScript code, typescript-eslint's "strictTypeChecked" configuration covers this issue with its "only-throw-error" rule.`,
         },
       ],
-    },
-    {
-      name: "no-unassigned-vars",
-      url: "https://eslint.org/docs/latest/rules/no-unassigned-vars",
-      severity: "error",
     },
     {
       name: "no-undef-init",
