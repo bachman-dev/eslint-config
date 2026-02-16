@@ -29,7 +29,7 @@
     "lint:fix": "tsdown --dts --format esm src/index.ts && eslint --fix . && prettier --write ."
   },
   "peerDependencies": {
-    "typescript-eslint": "^8.45.0"
+    "typescript-eslint": "^8.56.0"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
@@ -39,7 +39,7 @@
     "tsdown": "0.20.3",
     "tsx": "4.21.0",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.54.0"
+    "typescript-eslint": "8.56.0"
   },
   "dependencies": {
     "eslint": "^10.0.0"
