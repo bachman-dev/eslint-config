@@ -35,7 +35,7 @@ jobs:
       - name: Run ESLint
         run: pnpm lint:ci
       - name: Check If Repo Is Clean
-        uses: CatChen/check-git-status-action@7b45cb4ce3e00a8bce4910dc2d5f2785235a6d7e # v2
+        uses: CatChen/check-git-status-action@cc5a79733c441f67cd0cd076de116cd2eebcebfe # v2
         with:
           request-changes-if-not-clean: true
           request-changes-comment: "The Pull Request Branch is not clean; this is usually caused by either not running Prettier, or not generating the Rules README. Run pnpm lint:fix and pnpm build:docs on the branch, and commit any changes to the Pull Request. Thank you!"
