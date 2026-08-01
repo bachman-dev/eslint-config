@@ -62,32 +62,12 @@ export interface NamingConventionModifiers {
 
 interface NamingConventionSelectorModifiers {
   accessor: NamingConventionModifiers[
-    | "abstract"
-    | "override"
-    | "private"
-    | "protected"
-    | "public"
-    | "requiresQuotes"
-    | "static"];
+    "abstract" | "override" | "private" | "protected" | "public" | "requiresQuotes" | "static"];
   autoAccessor: NamingConventionModifiers[
-    | "abstract"
-    | "override"
-    | "private"
-    | "protected"
-    | "public"
-    | "requiresQuotes"
-    | "static"];
+    "abstract" | "override" | "private" | "protected" | "public" | "requiresQuotes" | "static"];
   class: "abstract" | "exported" | "unused";
   classMethod: NamingConventionModifiers[
-    | "#private"
-    | "abstract"
-    | "async"
-    | "override"
-    | "private"
-    | "protected"
-    | "public"
-    | "requiresQuotes"
-    | "static"];
+    "#private" | "abstract" | "async" | "override" | "private" | "protected" | "public" | "requiresQuotes" | "static"];
   classProperty: NamingConventionModifiers[
     | "#private"
     | "abstract"
@@ -99,13 +79,7 @@ interface NamingConventionSelectorModifiers {
     | "requiresQuotes"
     | "static"];
   classicAccessor: NamingConventionModifiers[
-    | "abstract"
-    | "override"
-    | "private"
-    | "protected"
-    | "public"
-    | "requiresQuotes"
-    | "static"];
+    "abstract" | "override" | "private" | "protected" | "public" | "requiresQuotes" | "static"];
   default: keyof NamingConventionModifiers;
   enum: NamingConventionModifiers["exported" | "unused"];
   enumMember: NamingConventionModifiers["requiresQuotes"];
