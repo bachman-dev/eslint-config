@@ -55,7 +55,7 @@ These rules come from ESLint's core ruleset, covering JavaScript and some TypeSc
 ```
 
 > [!TIP]
-> This expands upon ESLint's recommended configuration by allowing variables with an underscore (\_) to be unused.
+> This expands upon ESLint's recommended configuration by allowing variables with an underscore (_) to be unused.
 
 > [!NOTE]
 > See the entry for "@typescript-eslint/no-unused-vars" for TypeScript files.
