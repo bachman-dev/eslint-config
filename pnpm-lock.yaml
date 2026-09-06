@@ -26,10 +26,10 @@ importers:
         version: 3.9.6
       tsdown:
         specifier: 0.22.14
-        version: 0.22.14(tsx@4.23.1)(typescript@5.9.3)
+        version: 0.22.14(tsx@4.23.13)(typescript@5.9.3)
       tsx:
-        specifier: 4.23.1
-        version: 4.23.1
+        specifier: 4.23.13
+        version: 4.23.13
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -925,8 +925,8 @@ packages:
       unrun:
         optional: true
 
-  tsx@4.23.1:
-    resolution: {integrity: sha512-GQHnkIfxyx1wYCOS/wonik5MVRZU9hi1TEZmzGZSCJB1y9YgoZ8H6itNE/u4suE+yLmOzuE4E5S4TZ/ZX2wcWQ==}
+  tsx@4.23.13:
+    resolution: {integrity: sha512-BL5MGkRln6aDYhb0xbQlEAGw743BaZYWdbWtdJOBriYJboKgUUYCadFp2/FpBBZquBC/ezNBn7wMMPx7FDZUDw==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -1652,7 +1652,7 @@ snapshots:
     dependencies:
       typescript: 5.9.3
 
-  tsdown@0.22.14(tsx@4.23.1)(typescript@5.9.3):
+  tsdown@0.22.14(tsx@4.23.13)(typescript@5.9.3):
     dependencies:
       ansis: 4.3.1
       cac: 7.0.0
@@ -1670,7 +1670,7 @@ snapshots:
       unconfig-core: 7.5.0
       verkit: 0.3.2
     optionalDependencies:
-      tsx: 4.23.1
+      tsx: 4.23.13
       typescript: 5.9.3
     transitivePeerDependencies:
       - '@typescript/native-preview'
@@ -1678,7 +1678,7 @@ snapshots:
       - oxc-resolver
       - vue-tsc
 
-  tsx@4.23.1:
+  tsx@4.23.13:
     dependencies:
       esbuild: 0.28.2
     optionalDependencies:
