@@ -44,5 +44,16 @@
   "dependencies": {
     "eslint": "^10.0.0"
   },
-  "packageManager": "pnpm@12.8.2"
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.8.2",
+      "onFail": "download"
+    },
+    "runtime": {
+      "name": "node",
+      "version": "^24.21.0",
+      "onFail": "download"
+    }
+  }
 }
